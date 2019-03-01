@@ -1,0 +1,176 @@
+{
+  "pagelen": 10,
+  "values": [
+    {
+      "description": "* changed account ids in Subject and",
+      "links": {
+        "decline": {
+          "href": "https://api.bitbucket.org/2.0/repositories/test-group/test-project/pullrequests/11/decline"
+        },
+        "commits": {
+          "href": "https://api.bitbucket.org/2.0/repositories/test-group/test-project/pullrequests/11/commits"
+        },
+        "self": {
+          "href": "https://api.bitbucket.org/2.0/repositories/test-group/test-project/pullrequests/11"
+        },
+        "comments": {
+          "href": "https://api.bitbucket.org/2.0/repositories/test-group/test-project/pullrequests/11/comments"
+        },
+        "merge": {
+          "href": "https://api.bitbucket.org/2.0/repositories/test-group/test-project/pullrequests/11/merge"
+        },
+        "html": {
+          "href": "https://bitbucket.org/test-group/test-project/pull-requests/11"
+        },
+        "activity": {
+          "href": "https://api.bitbucket.org/2.0/repositories/test-group/test-project/pullrequests/11/activity"
+        },
+        "diff": {
+          "href": "https://api.bitbucket.org/2.0/repositories/test-group/test-project/pullrequests/11/diff"
+        },
+        "approve": {
+          "href": "https://api.bitbucket.org/2.0/repositories/test-group/test-project/pullrequests/11/approve"
+        },
+        "statuses": {
+          "href": "https://api.bitbucket.org/2.0/repositories/test-group/test-project/pullrequests/11/statuses"
+        }
+      },
+      "title": "Remos",
+      "close_source_branch": true,
+      "type": "pullrequest",
+      "id": 11,
+      "destination": {
+        "commit": {
+          "hash": "9c4c253fd2fb",
+          "type": "commit",
+          "links": {
+            "self": {
+              "href": "https://api.bitbucket.org/2.0/repositories/test-group/test-project/commit/9c4c253fd2fb"
+            },
+            "html": {
+              "href": "https://bitbucket.org/test-group/test-project/commits/9c4c253fd2fb"
+            }
+          }
+        },
+        "repository": {
+          "links": {
+            "self": {
+              "href": "https://api.bitbucket.org/2.0/repositories/test-group/test-project"
+            },
+            "html": {
+              "href": "https://bitbucket.org/test-group/test-project"
+            },
+            "avatar": {
+              "href": "https://bytebucket.org/ravatar/%7Bb191c4D?ts=default"
+            }
+          },
+          "type": "repository",
+          "name": "test-project",
+          "full_name": "test-group/test-project",
+          "uuid": "{b191c448-5028-4347-8a2b-62fa349ebc9d}"
+        },
+        "branch": {
+          "name": "develop"
+        }
+      },
+      "created_on": "2019-02-22T11:04:42.848370+00:00",
+      "summary": {
+        "raw": "dsadfsfsd",
+        "markup": "markdown",
+        "html": "dsfdsgfsgvdf",
+        "type": "rendered"
+      },
+      "source": {
+        "commit": {
+          "hash": "ds34j48fjfs4",
+          "type": "commit",
+          "links": {
+            "self": {
+              "href": "https://api.bitbucket.org/2.0/repositories/test-group/test-project/commit/ds34j48fjfs4"
+            },
+            "html": {
+              "href": "https://bitbucket.org/test-group/test-project/commits/ds34j48fjfs4"
+            }
+          }
+        },
+        "repository": {
+          "links": {
+            "self": {
+              "href": "https://api.bitbucket.org/2.0/repositories/test-group/test-project"
+            },
+            "html": {
+              "href": "https://bitbucket.org/test-group/test-project"
+            },
+            "avatar": {
+              "href": "https://bytebucket.org/ravatar/%"
+            }
+          },
+          "type": "repository",
+          "name": "test-project",
+          "full_name": "test-group/test-project",
+          "uuid": "{b191c448-5028-4347-8a2b-62fa349ebc9d}"
+        },
+        "branch": {
+          "name": "feature/whbe-2048-account-ids-to-string"
+        }
+      },
+      "comment_count": 2,
+      "state": "MERGED",
+      "task_count": 0,
+      "reason": "",
+      "updated_on": "2019-02-28T12:36:37.460452+00:00",
+      "author": {
+        "username": "jan_kowalski",
+        "display_name": "Jan Kowalski",
+        "account_id": "557058:80e04138-bef1-4b0b-a909-bccaaa606b98",
+        "links": {
+          "self": {
+            "href": "https://api.bitbucket.org/2.0/users/jan_kowalski"
+          },
+          "html": {
+            "href": "https://bitbucket.org/jan_kowalski/"
+          },
+          "avatar": {
+            "href": "https://bitbucket.org/account/jan_kowalski/avatar/"
+          }
+        },
+        "nickname": "jan_kowalski",
+        "type": "user",
+        "uuid": "{14157abe-2dd3-47d1-a1eb-a95afa4323ff}"
+      },
+      "merge_commit": {
+        "hash": "ds34j48fjfs4",
+        "type": "commit",
+        "links": {
+          "self": {
+            "href": "https://api.bitbucket.org/2.0/repositories/test-group/test-project/commit/ds34j48fjfs4"
+          },
+          "html": {
+            "href": "https://bitbucket.org/test-group/test-project/commits/ds34j48fjfs4"
+          }
+        }
+      },
+      "closed_by": {
+        "username": "jan_kowalski",
+        "display_name": "Jan Kowalski",
+        "account_id": "557058:dsafresfdbsvresvrvdxf06b98",
+        "links": {
+          "self": {
+            "href": "https://api.bitbucket.org/2.0/users/jan_kowalski"
+          },
+          "html": {
+            "href": "https://bitbucket.org/jan_kowalski/"
+          },
+          "avatar": {
+            "href": "https://bitbucket.org/account/jan_kowalski/avatar/"
+          }
+        },
+        "nickname": "jan_kowalski",
+        "type": "user",
+        "uuid": "{14157abe-23e3-47d1-a1eb-a95afa4323ff}"
+      }
+    }
+  ],
+  "page": 1,
+  "size": 1
+}
