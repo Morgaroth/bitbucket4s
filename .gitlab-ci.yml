@@ -8,6 +8,7 @@ cache:
 variables:
   GIT_STRATEGY: clone
   GIT_SUBMODULE_STRATEGY: none
+  SBT_OPTS: '-Xmx2g -Xss10m -Xms1g'
 #  GET_SOURCES_ATTEMPTS: 3
 
 stages:
@@ -22,7 +23,7 @@ before_script:
 tests:
   stage: validate
   script:
-    - sbt -ivy $PWD/.ivy2 -sbt-dir $PWD/.sbt validate
+    - sbt -v -ivy $PWD/.ivy2 -sbt-dir $PWD/.sbt validate
 
 release:
   stage: publish
@@ -38,7 +39,7 @@ release:
     - git checkout $CI_COMMIT_REF_NAME
     - git remote set-url --push origin $(perl -pe 's#.*@(.+?(\:\d+)?)/#git@\1:#' <<< $CI_REPOSITORY_URL)
     - git config --list
-    - sbt -ivy $PWD/.ivy2 -sbt-dir $PWD/.sbt -Dbintray.user=$BINTRAY_USER -Dbintray.pass=${_BINTRAY_PASS} "release with-defaults"
+    - sbt -v -ivy $PWD/.ivy2 -sbt-dir $PWD/.sbt -Dbintray.user=$BINTRAY_USER -Dbintray.pass=${_BINTRAY_PASS} ";test:compile;release with-defaults"
 
   after_script:
     - rm -Rfv .ssh

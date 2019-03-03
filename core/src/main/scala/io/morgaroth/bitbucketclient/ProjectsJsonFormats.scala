@@ -6,8 +6,8 @@ import cats.Monad
 import cats.data.EitherT
 import cats.syntax.either._
 import io.circe._
-import io.circe.parser._
-import io.circe.syntax._
+import io.circe.parser.decode
+import io.circe.syntax.EncoderOps
 import org.joda.time.DateTime
 import org.joda.time.format.DateTimeFormat
 

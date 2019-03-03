@@ -29,6 +29,25 @@ case class BBLinks(
                     avatar: Option[BBLink],
                   )
 
+case class BBCommitLinks(
+                          self: BBLink,
+                          html: BBLink,
+                          avatar: Option[BBLink],
+                        )
+
+case class BBPullRequestLinks(
+                               self: BBLink,
+                               html: BBLink,
+                               decline: BBLink,
+                               approve: BBLink,
+                               merge: BBLink,
+                               diff: BBLink,
+                               statuses: BBLink,
+                               commits: BBLink,
+                               comments: BBLink,
+                               activity: BBLink,
+                             )
+
 case class BBPullRequestBranch(
                                 name: String,
                               )
@@ -40,7 +59,7 @@ case class BBPullRequestMergeCommit(
 case class BBPullRequestCommit(
                                 hash: String,
                                 `type`: String,
-                                links: BBLinks,
+                                links: BBCommitLinks,
                               )
 
 case class BBPullRequestRepo(
@@ -69,7 +88,8 @@ case class BBPullRequest(
                           source: BBPRSideSpec,
                           state: String,
                           author: BBUSer,
-                          merge_commit: Option[BBPullRequestCommit]
+                          merge_commit: Option[BBPullRequestCommit],
+                          links: BBPullRequestLinks,
                         )
 
 
