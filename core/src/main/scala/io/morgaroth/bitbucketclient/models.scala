@@ -106,3 +106,9 @@ object BBPullRequestStatuses {
   case object Declined extends BBPullRequestState("DECLINED")
 
 }
+
+
+case class BBPullRequestUpdate(
+                                title: Option[String],
+                                description: Option[String],
+                              )

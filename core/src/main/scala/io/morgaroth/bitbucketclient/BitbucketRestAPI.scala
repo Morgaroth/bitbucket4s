@@ -56,16 +56,29 @@ trait BitbucketRestAPI[F[_]] extends LazyLogging with ProjectsJsonFormats {
     * @see https://developer.atlassian.com/bitbucket/api/2/reference/meta/filtering
     * @see https://developer.atlassian.com/bitbucket/api/2/reference/resource/repositories/%7Busername%7D/%7Brepo_slug%7D/pullrequests#get
     */
-  def searchPullRequests(
-                          repoId: String,
-                          sourceBranchLike: Option[String] = None,
-                          states: List[BBPullRequestState] = List.empty,
-                        ): EitherT[F, BitbucketError, Vector[BBPullRequest]] = {
+  def searchPullRequests(repoId: String)(
+    sourceBranchLike: Option[String] = None,
+    states: List[BBPullRequestState] = List.empty,
+  ): EitherT[F, BitbucketError, Vector[BBPullRequest]] = {
     val req = regGen(Methods.Get, API + s"repositories/$repoId/pullrequests", List(SearchQ(List(
       sourceBranchLike.map(x => "source.branch.name" ~ x).toList,
       List(BBStateP(states))
     ).flatten.reduce(_ and _))), None)
 
     getAllPaginatedPRs(req)
+  }
+
+  /** PUT /2.0/repositories/{username}/{repo_slug}/pullrequests/{pull_request_id}
+    *
+    * @see https://developer.atlassian.com/bitbucket/api/2/reference/resource/repositories/%7Busername%7D/%7Brepo_slug%7D/pullrequests/%7Bpull_request_id%7D#put
+    *
+    */
+  def updatePullRequest(repoId: String, pullRequestId: Long)(
+    title: Option[String],
+    description: Option[String],
+  ): EitherT[F, BitbucketError, BBPullRequest] = {
+    val data = BBPullRequestUpdate(title, description)
+    val req = regGen(Methods.Put, API + s"repositories/$repoId/pullrequests/", Nil, Some(MJson.write(data)))
+    invokeRequest(req).flatMap(MJson.readT[F, BBPullRequest])
   }
 }
