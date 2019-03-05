@@ -17,15 +17,4 @@ class ProjectsJsonFormatsTest extends FlatSpec with Matchers with ProjectsJsonFo
     result.right.get.values.head.merge_commit shouldBe defined
     println(result.right.get.values.head.merge_commit)
   }
-
-  it should "remove fields that has None value in raw print" in {
-    MJson.write(BBPullRequestUpdate(Some("some-title"), None)) shouldBe """{"title":"some-title"}"""
-  }
-
-  it should "remove fields that has None value in pretty print" in {
-    MJson.writePretty(BBPullRequestUpdate(Some("some-title"), None)) shouldBe
-      """{
-        |  "title" : "some-title"
-        |}""".stripMargin
-  }
 }
