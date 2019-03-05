@@ -68,16 +68,27 @@ trait BitbucketRestAPI[F[_]] extends LazyLogging with ProjectsJsonFormats {
     getAllPaginatedPRs(req)
   }
 
+  /** GET /2.0/repositories/{username}/{repo_slug}/pullrequests/{pull_request_id}
+    *
+    * @see https://developer.atlassian.com/bitbucket/api/2/reference/resource/repositories/%7Busername%7D/%7Brepo_slug%7D/pullrequests
+    *
+    */
+  def getPullRequest(repoId: String, pullRequestId: Long): EitherT[F, BitbucketError, BBPullRequestCompleteInfo] = {
+    val req = regGen(Methods.Get, API + s"repositories/$repoId/pullrequests/$pullRequestId", Nil, None)
+    invokeRequest(req).flatMap(MJson.readT[F, BBPullRequestCompleteInfo])
+  }
+
   /** PUT /2.0/repositories/{username}/{repo_slug}/pullrequests/{pull_request_id}
     *
     * @see https://developer.atlassian.com/bitbucket/api/2/reference/resource/repositories/%7Busername%7D/%7Brepo_slug%7D/pullrequests/%7Bpull_request_id%7D#put
     *
     */
   def updatePullRequest(repoId: String, pullRequestId: Long)(
-    title: Option[String],
-    description: Option[String],
+    title: String,
+    description: String,
+    reviewers: List[BBPullRequestReviewer],
   ): EitherT[F, BitbucketError, BBPullRequest] = {
-    val data = BBPullRequestUpdate(title, description)
+    val data = BBPullRequestUpdate(title, description, reviewers)
     val req = regGen(Methods.Put, API + s"repositories/$repoId/pullrequests/$pullRequestId", Nil, Some(MJson.write(data)))
     invokeRequest(req).flatMap(MJson.readT[F, BBPullRequest])
   }

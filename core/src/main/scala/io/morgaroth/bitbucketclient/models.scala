@@ -92,6 +92,23 @@ case class BBPullRequest(
                           links: BBPullRequestLinks,
                         )
 
+case class BBPullRequestCompleteInfo(
+                                      description: String,
+                                      title: String,
+                                      `type`: String,
+                                      close_source_branch: Boolean,
+                                      id: Long,
+                                      destination: BBPRSideSpec,
+                                      created_on: String,
+                                      summary: Map[String, String],
+                                      source: BBPRSideSpec,
+                                      state: String,
+                                      author: BBUSer,
+                                      merge_commit: Option[BBPullRequestCommit],
+                                      links: BBPullRequestLinks,
+                                      reviewers: List[BBPullRequestReviewer]
+                                    )
+
 
 abstract class BBPullRequestState(val name: String)
 
@@ -107,8 +124,19 @@ object BBPullRequestStatuses {
 
 }
 
+case class BBPullRequestReviewer(
+                                  username: String,
+                                  nickname: String,
+                                  //                                  account_status: String,
+                                  display_name: String,
+                                  //                                  website: String,
+                                  //                                  created_on: String,
+                                  uuid: UUID,
+                                )
+
 
 case class BBPullRequestUpdate(
-                                title: Option[String],
-                                description: Option[String],
+                                title: String,
+                                description: String,
+                                reviewers: List[BBPullRequestReviewer]
                               )
