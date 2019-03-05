@@ -19,7 +19,9 @@ case class BBUSer(
                    `type`: String,
                    uuid: UUID,
                    links: BBLinks,
-                 )
+                 ) {
+  def asUsername = BBUserUsername(username)
+}
 
 case class BBLink(href: String)
 
@@ -132,11 +134,18 @@ case class BBPullRequestReviewer(
                                   //                                  website: String,
                                   //                                  created_on: String,
                                   uuid: UUID,
-                                )
+                                ) {
+  def asUsername = BBUserUsername(username)
+}
+
+case class BBUserUsername(
+                           username: String,
+                         )
 
 
 case class BBPullRequestUpdate(
                                 title: String,
                                 description: String,
-                                reviewers: List[BBPullRequestReviewer]
+                                reviewers: List[BBUserUsername],
+                                close_source_branch: Boolean,
                               )

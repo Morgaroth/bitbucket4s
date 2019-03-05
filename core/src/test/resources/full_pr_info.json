@@ -1,0 +1,290 @@
+{
+  "rendered": {
+    "description": {
+      "raw": "with some updates\r\n\r\n==============================  \r\n[Jira ticket WHBE-3011](https://jira.willhillatlas.com/browse/WHBE-3011)\r\n\r\nCompanion PRs:  \r\n[#119 in the QA tests](https://bitbucket.org/code-factory-group/wh-tests/pull-requests/119)\r\n\r\n[CI E2E Tests runner](https://jenkins-krk.whbettingengine.com/job/_features/job/whbe-3011/build?delay=0sec)  \n  \n==============================  \n[Jira ticket WHBE-3011](https://jira.willhillatlas.com/browse/WHBE-3011)  \n  \nCompanion PRs:  \n[#119 in the QA tests](https://bitbucket.org/code-factory-group/wh-tests/pull-requests/119)  \n  \n[CI E2E Tests runner](https://jenkins-krk.whbettingengine.com/job/_features/job/whbe-3011/build?delay=0sec)",
+      "markup": "markdown",
+      "html": "<p>with some updates</p>\n<p>==============================<br />\n<a data-is-external-link=\"true\" href=\"https://jira.willhillatlas.com/browse/WHBE-3011\" rel=\"nofollow\">Jira ticket WHBE-3011</a></p>\n<p>Companion PRs:<br />\n<a data-is-external-link=\"true\" href=\"https://bitbucket.org/code-factory-group/wh-tests/pull-requests/119\" rel=\"nofollow\">#119 in the QA tests</a></p>\n<p><a data-is-external-link=\"true\" href=\"https://jenkins-krk.whbettingengine.com/job/_features/job/whbe-3011/build?delay=0sec\" rel=\"nofollow\">CI E2E Tests runner</a>  </p>\n<p>==============================<br />\n<a data-is-external-link=\"true\" href=\"https://jira.willhillatlas.com/browse/WHBE-3011\" rel=\"nofollow\">Jira ticket WHBE-3011</a>  </p>\n<p>Companion PRs:<br />\n<a data-is-external-link=\"true\" href=\"https://bitbucket.org/code-factory-group/wh-tests/pull-requests/119\" rel=\"nofollow\">#119 in the QA tests</a>  </p>\n<p><a data-is-external-link=\"true\" href=\"https://jenkins-krk.whbettingengine.com/job/_features/job/whbe-3011/build?delay=0sec\" rel=\"nofollow\">CI E2E Tests runner</a></p>",
+      "type": "rendered"
+    },
+    "title": {
+      "raw": "added some d and fixed manual unsettlement logic",
+      "markup": "markdown",
+      "html": "<p>added some d and fixed manual unsettlement logic</p>",
+      "type": "rendered"
+    }
+  },
+  "type": "pullrequest",
+  "description": "with some updates\r\n\r\n==============================  \r\n[Jira ticket WHBE-3011](https://jira.willhillatlas.com/browse/WHBE-3011)\r\n\r\nCompanion PRs:  \r\n[#119 in the QA tests](https://bitbucket.org/code-factory-group/wh-tests/pull-requests/119)\r\n\r\n[CI E2E Tests runner](https://jenkins-krk.whbettingengine.com/job/_features/job/whbe-3011/build?delay=0sec)  \n  \n==============================  \n[Jira ticket WHBE-3011](https://jira.willhillatlas.com/browse/WHBE-3011)  \n  \nCompanion PRs:  \n[#119 in the QA tests](https://bitbucket.org/code-factory-group/wh-tests/pull-requests/119)  \n  \n[CI E2E Tests runner](https://jenkins-krk.whbettingengine.com/job/_features/job/whbe-3011/build?delay=0sec)",
+  "links": {
+    "decline": {
+      "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/pullrequests/185/decline"
+    },
+    "commits": {
+      "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/pullrequests/185/commits"
+    },
+    "self": {
+      "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/pullrequests/185"
+    },
+    "comments": {
+      "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/pullrequests/185/comments"
+    },
+    "merge": {
+      "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/pullrequests/185/merge"
+    },
+    "html": {
+      "href": "https://bitbucket.org/code-factory-group/wh-betting-service/pull-requests/185"
+    },
+    "activity": {
+      "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/pullrequests/185/activity"
+    },
+    "diff": {
+      "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/pullrequests/185/diff"
+    },
+    "approve": {
+      "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/pullrequests/185/approve"
+    },
+    "statuses": {
+      "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/pullrequests/185/statuses"
+    }
+  },
+  "title": "added some d and fixed manual unsettlement logic",
+  "close_source_branch": false,
+  "reviewers": [
+    {
+      "username": "some-user-wh",
+      "display_name": "Kowalski Jan",
+      "account_id": "557058:f5be4e21-e53e-4fd6-9bc4-53753dcc2816",
+      "links": {
+        "self": {
+          "href": "https://api.bitbucket.org/2.0/users/some-user-wh"
+        },
+        "html": {
+          "href": "https://bitbucket.org/some-user-wh/"
+        },
+        "avatar": {
+          "href": "https://bitbucket.org/account/some-user-wh/avatar/"
+        }
+      },
+      "nickname": "some-user-wh",
+      "type": "user",
+      "uuid": "{99205fc1-16b2-43d2-9b9d-17d7839594b5}"
+    },
+    {
+      "username": "igor-alamakota",
+      "display_name": "Igor Alama kota",
+      "account_id": "5b7aae83332df52a5d944273",
+      "links": {
+        "self": {
+          "href": "https://api.bitbucket.org/2.0/users/igor_turcanovski"
+        },
+        "html": {
+          "href": "https://bitbucket.org/igor_turcanovski/"
+        },
+        "avatar": {
+          "href": "https://bitbucket.org/account/igor_turcanovski/avatar/"
+        }
+      },
+      "nickname": "igor_turcanovski",
+      "type": "user",
+      "uuid": "{37fde83c-5008-418f-b488-2b18b339436c}"
+    },
+    {
+      "username": "pidrozdzielGP",
+      "display_name": "Piotr Droździel",
+      "account_id": "5bc4a575128c5028944c40f8",
+      "links": {
+        "self": {
+          "href": "https://api.bitbucket.org/2.0/users/pidrozdzielGP"
+        },
+        "html": {
+          "href": "https://bitbucket.org/pidrozdzielGP/"
+        },
+        "avatar": {
+          "href": "https://bitbucket.org/account/pidrozdzielGP/avatar/"
+        }
+      },
+      "nickname": "pidrozdzielGP",
+      "type": "user",
+      "uuid": "{5fd7c9bc-11a0-4f3c-8c72-1c7fff10fb9b}"
+    }
+  ],
+  "id": 185,
+  "destination": {
+    "commit": {
+      "hash": "40e798719013",
+      "type": "commit",
+      "links": {
+        "self": {
+          "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/commit/40e798719013"
+        },
+        "html": {
+          "href": "https://bitbucket.org/code-factory-group/wh-betting-service/commits/40e798719013"
+        }
+      }
+    },
+    "repository": {
+      "links": {
+        "self": {
+          "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service"
+        },
+        "html": {
+          "href": "https://bitbucket.org/code-factory-group/wh-betting-service"
+        },
+        "avatar": {
+          "href": "https://bytebucket.org/ravatar/%7Bdbf62b6b-78b1-4031-b785-7221118e47d1%7D?ts=default"
+        }
+      },
+      "type": "repository",
+      "name": "wh-betting-service",
+      "full_name": "code-factory-group/wh-betting-service",
+      "uuid": "{dbf62b6b-78b1-4031-b785-7221118e47d1}"
+    },
+    "branch": {
+      "name": "develop"
+    }
+  },
+  "created_on": "2019-03-04T21:15:06.620370+00:00",
+  "summary": {
+    "raw": "with some updates\r\n\r\n==============================  \r\n[Jira ticket WHBE-3011](https://jira.willhillatlas.com/browse/WHBE-3011)\r\n\r\nCompanion PRs:  \r\n[#119 in the QA tests](https://bitbucket.org/code-factory-group/wh-tests/pull-requests/119)\r\n\r\n[CI E2E Tests runner](https://jenkins-krk.whbettingengine.com/job/_features/job/whbe-3011/build?delay=0sec)  \n  \n==============================  \n[Jira ticket WHBE-3011](https://jira.willhillatlas.com/browse/WHBE-3011)  \n  \nCompanion PRs:  \n[#119 in the QA tests](https://bitbucket.org/code-factory-group/wh-tests/pull-requests/119)  \n  \n[CI E2E Tests runner](https://jenkins-krk.whbettingengine.com/job/_features/job/whbe-3011/build?delay=0sec)",
+    "markup": "markdown",
+    "html": "<p>with some updates</p>\n<p>==============================<br />\n<a data-is-external-link=\"true\" href=\"https://jira.willhillatlas.com/browse/WHBE-3011\" rel=\"nofollow\">Jira ticket WHBE-3011</a></p>\n<p>Companion PRs:<br />\n<a data-is-external-link=\"true\" href=\"https://bitbucket.org/code-factory-group/wh-tests/pull-requests/119\" rel=\"nofollow\">#119 in the QA tests</a></p>\n<p><a data-is-external-link=\"true\" href=\"https://jenkins-krk.whbettingengine.com/job/_features/job/whbe-3011/build?delay=0sec\" rel=\"nofollow\">CI E2E Tests runner</a>  </p>\n<p>==============================<br />\n<a data-is-external-link=\"true\" href=\"https://jira.willhillatlas.com/browse/WHBE-3011\" rel=\"nofollow\">Jira ticket WHBE-3011</a>  </p>\n<p>Companion PRs:<br />\n<a data-is-external-link=\"true\" href=\"https://bitbucket.org/code-factory-group/wh-tests/pull-requests/119\" rel=\"nofollow\">#119 in the QA tests</a>  </p>\n<p><a data-is-external-link=\"true\" href=\"https://jenkins-krk.whbettingengine.com/job/_features/job/whbe-3011/build?delay=0sec\" rel=\"nofollow\">CI E2E Tests runner</a></p>",
+    "type": "rendered"
+  },
+  "source": {
+    "commit": {
+      "hash": "4e38cf19cfaf",
+      "type": "commit",
+      "links": {
+        "self": {
+          "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/commit/4e38cf19cfaf"
+        },
+        "html": {
+          "href": "https://bitbucket.org/code-factory-group/wh-betting-service/commits/4e38cf19cfaf"
+        }
+      }
+    },
+    "repository": {
+      "links": {
+        "self": {
+          "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service"
+        },
+        "html": {
+          "href": "https://bitbucket.org/code-factory-group/wh-betting-service"
+        },
+        "avatar": {
+          "href": "https://bytebucket.org/ravatar/%7Bdbf62b6b-78b1-4031-b785-7221118e47d1%7D?ts=default"
+        }
+      },
+      "type": "repository",
+      "name": "wh-betting-service",
+      "full_name": "code-factory-group/wh-betting-service",
+      "uuid": "{dbf62b6b-78b1-4031-b785-7221118e47d1}"
+    },
+    "branch": {
+      "name": "fix/whbe-3011-unsettle-twice-bug"
+    }
+  },
+  "comment_count": 0,
+  "state": "OPEN",
+  "task_count": 0,
+  "participants": [
+    {
+      "role": "REVIEWER",
+      "participated_on": null,
+      "type": "participant",
+      "approved": false,
+      "user": {
+        "username": "pidrozdzielGP",
+        "display_name": "Piotr Droździel",
+        "account_id": "5bc4a575128c5028944c40f8",
+        "links": {
+          "self": {
+            "href": "https://api.bitbucket.org/2.0/users/pidrozdzielGP"
+          },
+          "html": {
+            "href": "https://bitbucket.org/pidrozdzielGP/"
+          },
+          "avatar": {
+            "href": "https://bitbucket.org/account/pidrozdzielGP/avatar/"
+          }
+        },
+        "nickname": "pidrozdzielGP",
+        "type": "user",
+        "uuid": "{5fd7c9bc-11a0-4f3c-8c72-1c7fff10fb9b}"
+      }
+    },
+    {
+      "role": "REVIEWER",
+      "participated_on": "2019-03-05T08:49:58.509710+00:00",
+      "type": "participant",
+      "approved": true,
+      "user": {
+        "username": "igor_turcanovski",
+        "display_name": "Igor Turcanovski",
+        "account_id": "5b7aae83332df52a5d944273",
+        "links": {
+          "self": {
+            "href": "https://api.bitbucket.org/2.0/users/igor_turcanovski"
+          },
+          "html": {
+            "href": "https://bitbucket.org/igor_turcanovski/"
+          },
+          "avatar": {
+            "href": "https://bitbucket.org/account/igor_turcanovski/avatar/"
+          }
+        },
+        "nickname": "igor_turcanovski",
+        "type": "user",
+        "uuid": "{37fde83c-5008-418f-b488-2b18b339436c}"
+      }
+    },
+    {
+      "role": "REVIEWER",
+      "participated_on": null,
+      "type": "participant",
+      "approved": false,
+      "user": {
+        "username": "some-user-wh",
+        "display_name": "Patryk Kociubowski",
+        "account_id": "557058:f5be4e21-e53e-4fd6-9bc4-53753dcc2816",
+        "links": {
+          "self": {
+            "href": "https://api.bitbucket.org/2.0/users/some-user-wh"
+          },
+          "html": {
+            "href": "https://bitbucket.org/some-user-wh/"
+          },
+          "avatar": {
+            "href": "https://bitbucket.org/account/some-user-wh/avatar/"
+          }
+        },
+        "nickname": "some-user-wh",
+        "type": "user",
+        "uuid": "{99205fc1-16b2-43d2-9b9d-17d7839594b5}"
+      }
+    }
+  ],
+  "reason": "",
+  "updated_on": "2019-03-05T20:36:13.031486+00:00",
+  "author": {
+    "username": "some-user-second",
+    "display_name": "Jan Nowak",
+    "account_id": "557058:80e04138-bef1-4b0b-a909-bccaaa606b98",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/users/some-user-second"
+      },
+      "html": {
+        "href": "https://bitbucket.org/some-user-second/"
+      },
+      "avatar": {
+        "href": "https://bitbucket.org/account/some-user-second/avatar/"
+      }
+    },
+    "nickname": "some-user-second",
+    "type": "user",
+    "uuid": "{14157abe-2dd3-47d1-a1eb-a95afa4323ff}"
+  },
+  "merge_commit": null,
+  "closed_by": null
+}
