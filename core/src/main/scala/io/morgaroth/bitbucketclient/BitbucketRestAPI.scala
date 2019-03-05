@@ -78,7 +78,7 @@ trait BitbucketRestAPI[F[_]] extends LazyLogging with ProjectsJsonFormats {
     description: Option[String],
   ): EitherT[F, BitbucketError, BBPullRequest] = {
     val data = BBPullRequestUpdate(title, description)
-    val req = regGen(Methods.Put, API + s"repositories/$repoId/pullrequests/", Nil, Some(MJson.write(data)))
+    val req = regGen(Methods.Put, API + s"repositories/$repoId/pullrequests/$pullRequestId", Nil, Some(MJson.write(data)))
     invokeRequest(req).flatMap(MJson.readT[F, BBPullRequest])
   }
 }
