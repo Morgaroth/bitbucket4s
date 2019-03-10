@@ -19,18 +19,18 @@ case object NamedBranch extends BBBranchType {
 case class BBBranch(
                      heads: Vector[BBCommit],
                      name: String,
-                     default_merge_strategy: String,
-                     merge_strategies: Vector[String],
+                     default_merge_strategy: MergeStrategy,
+                     merge_strategies: Vector[MergeStrategy],
                      `type`: BBBranchType,
                      links: BBLinksCommits,
                      target: BBBranchTarget,
                    )
 
 case class BBLinksCommits(
-                          self: BBLink,
-                          html: BBLink,
-                          commits: BBLink,
-                        )
+                           self: BBLink,
+                           html: BBLink,
+                           commits: BBLink,
+                         )
 
 case class BBBranchTarget(
                            hash: String,

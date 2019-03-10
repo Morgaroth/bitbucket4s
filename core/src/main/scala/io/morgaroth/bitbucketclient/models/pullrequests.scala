@@ -56,7 +56,7 @@ case class BBPullRequestCompleteInfo(
                                       close_source_branch: Boolean,
                                       id: Long,
                                       destination: BBPRSideSpec,
-                                      created_on: String,
+                                      created_on: DateTime,
                                       summary: BBPullrequestSummary,
                                       source: BBPRSideSpec,
                                       state: BBPullRequestState,
@@ -94,7 +94,7 @@ case class BBPullRequestReviewer(
                                   nickname: String,
                                   account_status: String,
                                   display_name: String,
-                                  created_on: String,
+                                  created_on: DateTime,
                                   uuid: UUID,
                                 ) {
   def asUsername = BBUserUsername(username)

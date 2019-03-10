@@ -5,7 +5,6 @@ import java.util.UUID
 import io.circe.syntax.EncoderOps
 import io.circe.{Decoder, Encoder}
 
-import scala.language.{higherKinds, implicitConversions}
 import scala.util.Try
 
 

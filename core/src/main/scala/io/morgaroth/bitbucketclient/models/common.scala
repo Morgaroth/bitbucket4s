@@ -57,3 +57,26 @@ case class BBUser(
 }
 
 case class BBUserUsername(username: String)
+
+
+sealed trait MergeStrategy {
+  def repr: String
+}
+
+object MergeStrategy {
+  val all: Seq[MergeStrategy] = Seq(Merge, Squash, FastForward)
+  val byName: Map[String, MergeStrategy] = all.map(x => x.repr -> x).toMap
+
+  case object Merge extends MergeStrategy {
+    override val repr: String = "merge_commit"
+  }
+
+  case object Squash extends MergeStrategy {
+    override val repr: String = "squash"
+  }
+
+  case object FastForward extends MergeStrategy {
+    override val repr: String = "fast_forward"
+  }
+
+}
