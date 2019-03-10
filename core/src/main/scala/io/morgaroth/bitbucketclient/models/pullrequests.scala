@@ -2,6 +2,8 @@ package io.morgaroth.bitbucketclient.models
 
 import java.util.UUID
 
+import org.joda.time.DateTime
+
 case class BBPullRequestLinks(
                                self: BBLink,
                                html: BBLink,
@@ -38,10 +40,10 @@ case class BBPullRequest(
                           close_source_branch: Boolean,
                           id: Long,
                           destination: BBPRSideSpec,
-                          created_on: String,
-                          summary: Map[String, String],
+                          created_on: DateTime,
+                          summary: BBPullrequestSummary,
                           source: BBPRSideSpec,
-                          state: String,
+                          state: BBPullRequestState,
                           author: BBUser,
                           merge_commit: Option[BBCommit],
                           links: BBPullRequestLinks,
@@ -55,18 +57,27 @@ case class BBPullRequestCompleteInfo(
                                       id: Long,
                                       destination: BBPRSideSpec,
                                       created_on: String,
-                                      summary: Map[String, String],
+                                      summary: BBPullrequestSummary,
                                       source: BBPRSideSpec,
-                                      state: String,
+                                      state: BBPullRequestState,
                                       author: BBUser,
                                       merge_commit: Option[BBCommit],
                                       links: BBPullRequestLinks,
                                       reviewers: List[BBPullRequestReviewer]
                                     )
 
-abstract class BBPullRequestState(val name: String)
+case class BBPullrequestSummary(
+                                 raw: String,
+                                 markup: String,
+                                 `type`: String,
+                                 html: String,
+                               )
 
-object BBPullRequestStatuses {
+sealed abstract class BBPullRequestState(val name: String)
+
+object BBPullRequestStates {
+  val all: Seq[BBPullRequestState] = Seq(Merged, Superseded, Open, Declined)
+  val byName: Map[String, BBPullRequestState] = all.map(x => x.name -> x).toMap
 
   case object Merged extends BBPullRequestState("MERGED")
 

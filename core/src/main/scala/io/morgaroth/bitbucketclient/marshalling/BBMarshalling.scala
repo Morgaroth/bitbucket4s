@@ -14,7 +14,8 @@ import scala.language.{higherKinds, implicitConversions}
 
 trait Bitbucket4sMarshalling extends JodaCodec
   with BBUUUIDCodec
-  with BranchTypeCodec {
+  with BranchTypeCodec
+  with PullRequestStateCodec {
 
   implicit class Extractable(value: JsonObject) {
     def extract[T](implicit decoder: Decoder[T]): Either[Error, T] = decode[T](value.toString)
