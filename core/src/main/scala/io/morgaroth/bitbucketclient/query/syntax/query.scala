@@ -2,7 +2,7 @@ package io.morgaroth.bitbucketclient.query.syntax
 
 import java.net.URLEncoder
 
-import io.morgaroth.bitbucketclient.BBPullRequestState
+import io.morgaroth.bitbucketclient.models.BBPullRequestState
 import org.joda.time.DateTime
 
 
@@ -134,7 +134,7 @@ object SearchQuery {
 
   def BBStateP(right: BBPullRequestState, more: BBPullRequestState*): SearchQuery =
     BBStateP(right :: more.toList)
-  
+
 }
 
 

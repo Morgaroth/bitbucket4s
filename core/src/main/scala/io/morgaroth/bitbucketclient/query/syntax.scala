@@ -2,8 +2,9 @@ package io.morgaroth.bitbucketclient.query
 
 import java.net.URLEncoder
 
+import io.morgaroth.bitbucketclient.BitbucketConfig
+import io.morgaroth.bitbucketclient.models.BBPullRequestState
 import io.morgaroth.bitbucketclient.query.syntax.SearchQuery
-import io.morgaroth.bitbucketclient.{BBPullRequestState, BitbucketConfig}
 
 import scala.language.implicitConversions
 

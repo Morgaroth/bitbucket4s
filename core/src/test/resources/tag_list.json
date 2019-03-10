@@ -1,0 +1,977 @@
+{
+  "pagelen": 10,
+  "values": [
+    {
+      "name": "3.1.2",
+      "links": {
+        "commits": {
+          "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commits/3.1.2"
+        },
+        "self": {
+          "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/refs/tags/3.1.2"
+        },
+        "html": {
+          "href": "https://bitbucket.org/seanfarley/mercurial/commits/tag/3.1.2"
+        }
+      },
+      "tagger": null,
+      "date": null,
+      "message": null,
+      "type": "tag",
+      "target": {
+        "hash": "f768c888aaa68d12dd7f509dcc7f01c9584357d0",
+        "repository": {
+          "links": {
+            "self": {
+              "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial"
+            },
+            "html": {
+              "href": "https://bitbucket.org/seanfarley/mercurial"
+            },
+            "avatar": {
+              "href": "https://bytebucket.org/ravatar/%7B73dcbd61-e506-4fc1-9ecd-31be2b6d6031%7D?ts=default"
+            }
+          },
+          "type": "repository",
+          "name": "mercurial",
+          "full_name": "seanfarley/mercurial",
+          "uuid": "{73dcbd61-e506-4fc1-9ecd-31be2b6d6031}"
+        },
+        "links": {
+          "self": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/f768c888aaa68d12dd7f509dcc7f01c9584357d0"
+          },
+          "comments": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/f768c888aaa68d12dd7f509dcc7f01c9584357d0/comments"
+          },
+          "html": {
+            "href": "https://bitbucket.org/seanfarley/mercurial/commits/f768c888aaa68d12dd7f509dcc7f01c9584357d0"
+          },
+          "diff": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/diff/f768c888aaa68d12dd7f509dcc7f01c9584357d0"
+          },
+          "approve": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/f768c888aaa68d12dd7f509dcc7f01c9584357d0/approve"
+          },
+          "statuses": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/f768c888aaa68d12dd7f509dcc7f01c9584357d0/statuses"
+          }
+        },
+        "author": {
+          "raw": "Matt Mackall <mpm@selenic.com>",
+          "type": "author",
+          "user": {
+            "username": "mpmselenic",
+            "display_name": "Matt Mackall",
+            "account_id": null,
+            "links": {
+              "self": {
+                "href": "https://api.bitbucket.org/2.0/users/mpmselenic"
+              },
+              "html": {
+                "href": "https://bitbucket.org/mpmselenic/"
+              },
+              "avatar": {
+                "href": "https://bitbucket.org/account/mpmselenic/avatar/"
+              }
+            },
+            "nickname": "mpmselenic",
+            "type": "user",
+            "uuid": "{a4934530-db4c-419c-a478-9ab4964c2ee7}"
+          }
+        },
+        "parents": [
+          {
+            "hash": "551d776a0a9ab1522be88e1e26d8f1ff37f304b8",
+            "type": "commit",
+            "links": {
+              "self": {
+                "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/551d776a0a9ab1522be88e1e26d8f1ff37f304b8"
+              },
+              "html": {
+                "href": "https://bitbucket.org/seanfarley/mercurial/commits/551d776a0a9ab1522be88e1e26d8f1ff37f304b8"
+              }
+            }
+          },
+          {
+            "hash": "a89510c909ca511c620ba2923c42bc67bb2d34ca",
+            "type": "commit",
+            "links": {
+              "self": {
+                "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/a89510c909ca511c620ba2923c42bc67bb2d34ca"
+              },
+              "html": {
+                "href": "https://bitbucket.org/seanfarley/mercurial/commits/a89510c909ca511c620ba2923c42bc67bb2d34ca"
+              }
+            }
+          }
+        ],
+        "date": "2014-10-01T17:35:18+00:00",
+        "message": "merge with i18n",
+        "type": "commit"
+      }
+    },
+    {
+      "name": "3.1.1",
+      "links": {
+        "commits": {
+          "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commits/3.1.1"
+        },
+        "self": {
+          "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/refs/tags/3.1.1"
+        },
+        "html": {
+          "href": "https://bitbucket.org/seanfarley/mercurial/commits/tag/3.1.1"
+        }
+      },
+      "tagger": null,
+      "date": null,
+      "message": null,
+      "type": "tag",
+      "target": {
+        "hash": "5dc91146f35369949ea56b40172308158b59063a",
+        "repository": {
+          "links": {
+            "self": {
+              "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial"
+            },
+            "html": {
+              "href": "https://bitbucket.org/seanfarley/mercurial"
+            },
+            "avatar": {
+              "href": "https://bytebucket.org/ravatar/%7B73dcbd61-e506-4fc1-9ecd-31be2b6d6031%7D?ts=default"
+            }
+          },
+          "type": "repository",
+          "name": "mercurial",
+          "full_name": "seanfarley/mercurial",
+          "uuid": "{73dcbd61-e506-4fc1-9ecd-31be2b6d6031}"
+        },
+        "links": {
+          "self": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/5dc91146f35369949ea56b40172308158b59063a"
+          },
+          "comments": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/5dc91146f35369949ea56b40172308158b59063a/comments"
+          },
+          "html": {
+            "href": "https://bitbucket.org/seanfarley/mercurial/commits/5dc91146f35369949ea56b40172308158b59063a"
+          },
+          "diff": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/diff/5dc91146f35369949ea56b40172308158b59063a"
+          },
+          "approve": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/5dc91146f35369949ea56b40172308158b59063a/approve"
+          },
+          "statuses": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/5dc91146f35369949ea56b40172308158b59063a/statuses"
+          }
+        },
+        "author": {
+          "raw": "Matt Mackall <mpm@selenic.com>",
+          "type": "author",
+          "user": {
+            "username": "mpmselenic",
+            "display_name": "Matt Mackall",
+            "account_id": null,
+            "links": {
+              "self": {
+                "href": "https://api.bitbucket.org/2.0/users/mpmselenic"
+              },
+              "html": {
+                "href": "https://bitbucket.org/mpmselenic/"
+              },
+              "avatar": {
+                "href": "https://bitbucket.org/account/mpmselenic/avatar/"
+              }
+            },
+            "nickname": "mpmselenic",
+            "type": "user",
+            "uuid": "{a4934530-db4c-419c-a478-9ab4964c2ee7}"
+          }
+        },
+        "parents": [
+          {
+            "hash": "e284de138f00676f33a0d8a390dd79fafcf5087d",
+            "type": "commit",
+            "links": {
+              "self": {
+                "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/e284de138f00676f33a0d8a390dd79fafcf5087d"
+              },
+              "html": {
+                "href": "https://bitbucket.org/seanfarley/mercurial/commits/e284de138f00676f33a0d8a390dd79fafcf5087d"
+              }
+            }
+          },
+          {
+            "hash": "737b2bea97f898ed098b523d1674a486ce2e24f0",
+            "type": "commit",
+            "links": {
+              "self": {
+                "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/737b2bea97f898ed098b523d1674a486ce2e24f0"
+              },
+              "html": {
+                "href": "https://bitbucket.org/seanfarley/mercurial/commits/737b2bea97f898ed098b523d1674a486ce2e24f0"
+              }
+            }
+          }
+        ],
+        "date": "2014-09-01T21:43:33+00:00",
+        "message": "merge with i18n",
+        "type": "commit"
+      }
+    },
+    {
+      "name": "1.0.1",
+      "links": {
+        "commits": {
+          "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commits/1.0.1"
+        },
+        "self": {
+          "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/refs/tags/1.0.1"
+        },
+        "html": {
+          "href": "https://bitbucket.org/seanfarley/mercurial/commits/tag/1.0.1"
+        }
+      },
+      "tagger": null,
+      "date": null,
+      "message": null,
+      "type": "tag",
+      "target": {
+        "hash": "d5cbbe2c49cee22a9fbeb9ea41daa0ac4e26b846",
+        "repository": {
+          "links": {
+            "self": {
+              "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial"
+            },
+            "html": {
+              "href": "https://bitbucket.org/seanfarley/mercurial"
+            },
+            "avatar": {
+              "href": "https://bytebucket.org/ravatar/%7B73dcbd61-e506-4fc1-9ecd-31be2b6d6031%7D?ts=default"
+            }
+          },
+          "type": "repository",
+          "name": "mercurial",
+          "full_name": "seanfarley/mercurial",
+          "uuid": "{73dcbd61-e506-4fc1-9ecd-31be2b6d6031}"
+        },
+        "links": {
+          "self": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/d5cbbe2c49cee22a9fbeb9ea41daa0ac4e26b846"
+          },
+          "comments": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/d5cbbe2c49cee22a9fbeb9ea41daa0ac4e26b846/comments"
+          },
+          "patch": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/patch/d5cbbe2c49cee22a9fbeb9ea41daa0ac4e26b846"
+          },
+          "html": {
+            "href": "https://bitbucket.org/seanfarley/mercurial/commits/d5cbbe2c49cee22a9fbeb9ea41daa0ac4e26b846"
+          },
+          "diff": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/diff/d5cbbe2c49cee22a9fbeb9ea41daa0ac4e26b846"
+          },
+          "approve": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/d5cbbe2c49cee22a9fbeb9ea41daa0ac4e26b846/approve"
+          },
+          "statuses": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/d5cbbe2c49cee22a9fbeb9ea41daa0ac4e26b846/statuses"
+          }
+        },
+        "author": {
+          "raw": "Dirkjan Ochtman <dirkjan@ochtman.nl>",
+          "type": "author",
+          "user": {
+            "username": "djc",
+            "display_name": "Dirkjan Ochtman",
+            "account_id": "557058:f45ce71d-83fd-4ca5-9337-7184db9211b4",
+            "links": {
+              "self": {
+                "href": "https://api.bitbucket.org/2.0/users/djc"
+              },
+              "html": {
+                "href": "https://bitbucket.org/djc/"
+              },
+              "avatar": {
+                "href": "https://bitbucket.org/account/djc/avatar/"
+              }
+            },
+            "nickname": "djc",
+            "type": "user",
+            "uuid": "{cf712f58-c94a-451b-9dd0-363fd62e866c}"
+          }
+        },
+        "parents": [
+          {
+            "hash": "4f3e0dfa24a939ec78701c41d27b8d972a3efddf",
+            "type": "commit",
+            "links": {
+              "self": {
+                "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/4f3e0dfa24a939ec78701c41d27b8d972a3efddf"
+              },
+              "html": {
+                "href": "https://bitbucket.org/seanfarley/mercurial/commits/4f3e0dfa24a939ec78701c41d27b8d972a3efddf"
+              }
+            }
+          }
+        ],
+        "date": "2008-05-22T11:28:34+00:00",
+        "message": "mq: lose the trailing whitespace",
+        "type": "commit"
+      }
+    },
+    {
+      "name": "1.0.2",
+      "links": {
+        "commits": {
+          "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commits/1.0.2"
+        },
+        "self": {
+          "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/refs/tags/1.0.2"
+        },
+        "html": {
+          "href": "https://bitbucket.org/seanfarley/mercurial/commits/tag/1.0.2"
+        }
+      },
+      "tagger": null,
+      "date": null,
+      "message": null,
+      "type": "tag",
+      "target": {
+        "hash": "d2375bbee6d47e62ba8e415c86e83a465dc4dce9",
+        "repository": {
+          "links": {
+            "self": {
+              "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial"
+            },
+            "html": {
+              "href": "https://bitbucket.org/seanfarley/mercurial"
+            },
+            "avatar": {
+              "href": "https://bytebucket.org/ravatar/%7B73dcbd61-e506-4fc1-9ecd-31be2b6d6031%7D?ts=default"
+            }
+          },
+          "type": "repository",
+          "name": "mercurial",
+          "full_name": "seanfarley/mercurial",
+          "uuid": "{73dcbd61-e506-4fc1-9ecd-31be2b6d6031}"
+        },
+        "links": {
+          "self": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/d2375bbee6d47e62ba8e415c86e83a465dc4dce9"
+          },
+          "comments": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/d2375bbee6d47e62ba8e415c86e83a465dc4dce9/comments"
+          },
+          "patch": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/patch/d2375bbee6d47e62ba8e415c86e83a465dc4dce9"
+          },
+          "html": {
+            "href": "https://bitbucket.org/seanfarley/mercurial/commits/d2375bbee6d47e62ba8e415c86e83a465dc4dce9"
+          },
+          "diff": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/diff/d2375bbee6d47e62ba8e415c86e83a465dc4dce9"
+          },
+          "approve": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/d2375bbee6d47e62ba8e415c86e83a465dc4dce9/approve"
+          },
+          "statuses": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/d2375bbee6d47e62ba8e415c86e83a465dc4dce9/statuses"
+          }
+        },
+        "author": {
+          "raw": "Remy Roy <remyroy@remyroy.com>",
+          "type": "author",
+          "user": {
+            "username": "remyroy",
+            "display_name": "Rémy Roy",
+            "account_id": null,
+            "links": {
+              "self": {
+                "href": "https://api.bitbucket.org/2.0/users/remyroy"
+              },
+              "html": {
+                "href": "https://bitbucket.org/remyroy/"
+              },
+              "avatar": {
+                "href": "https://bitbucket.org/account/remyroy/avatar/"
+              }
+            },
+            "nickname": "remyroy",
+            "type": "user",
+            "uuid": "{bc02e3c8-db1f-4e79-9236-7615436757d6}"
+          }
+        },
+        "parents": [
+          {
+            "hash": "892806b3fc0fc431bdb3cfc665338630ca182f5a",
+            "type": "commit",
+            "links": {
+              "self": {
+                "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/892806b3fc0fc431bdb3cfc665338630ca182f5a"
+              },
+              "html": {
+                "href": "https://bitbucket.org/seanfarley/mercurial/commits/892806b3fc0fc431bdb3cfc665338630ca182f5a"
+              }
+            }
+          }
+        ],
+        "date": "2008-08-12T14:05:00+00:00",
+        "message": "Folding correction and missing import",
+        "type": "commit"
+      }
+    },
+    {
+      "name": "4.6rc1",
+      "links": {
+        "commits": {
+          "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commits/4.6rc1"
+        },
+        "self": {
+          "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/refs/tags/4.6rc1"
+        },
+        "html": {
+          "href": "https://bitbucket.org/seanfarley/mercurial/commits/tag/4.6rc1"
+        }
+      },
+      "tagger": null,
+      "date": null,
+      "message": null,
+      "type": "tag",
+      "target": {
+        "hash": "1ec874717d8a93b19e0d50628443e0ee5efab3a9",
+        "repository": {
+          "links": {
+            "self": {
+              "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial"
+            },
+            "html": {
+              "href": "https://bitbucket.org/seanfarley/mercurial"
+            },
+            "avatar": {
+              "href": "https://bytebucket.org/ravatar/%7B73dcbd61-e506-4fc1-9ecd-31be2b6d6031%7D?ts=default"
+            }
+          },
+          "type": "repository",
+          "name": "mercurial",
+          "full_name": "seanfarley/mercurial",
+          "uuid": "{73dcbd61-e506-4fc1-9ecd-31be2b6d6031}"
+        },
+        "links": {
+          "self": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/1ec874717d8a93b19e0d50628443e0ee5efab3a9"
+          },
+          "comments": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/1ec874717d8a93b19e0d50628443e0ee5efab3a9/comments"
+          },
+          "patch": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/patch/1ec874717d8a93b19e0d50628443e0ee5efab3a9"
+          },
+          "html": {
+            "href": "https://bitbucket.org/seanfarley/mercurial/commits/1ec874717d8a93b19e0d50628443e0ee5efab3a9"
+          },
+          "diff": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/diff/1ec874717d8a93b19e0d50628443e0ee5efab3a9"
+          },
+          "approve": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/1ec874717d8a93b19e0d50628443e0ee5efab3a9/approve"
+          },
+          "statuses": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/1ec874717d8a93b19e0d50628443e0ee5efab3a9/statuses"
+          }
+        },
+        "author": {
+          "raw": "Yuya Nishihara <yuya@tcha.org>",
+          "type": "author",
+          "user": {
+            "username": "yuja",
+            "display_name": "Yuya Nishihara",
+            "account_id": "557058:4b06a480-f21c-438a-ac32-49c7e6bffe0a",
+            "links": {
+              "self": {
+                "href": "https://api.bitbucket.org/2.0/users/yuja"
+              },
+              "html": {
+                "href": "https://bitbucket.org/yuja/"
+              },
+              "avatar": {
+                "href": "https://bitbucket.org/account/yuja/avatar/"
+              }
+            },
+            "nickname": "yuja",
+            "type": "user",
+            "uuid": "{75137504-2657-4a1e-bcf3-13db1660e49e}"
+          }
+        },
+        "parents": [
+          {
+            "hash": "72f6498c040bdfa21a119c54a257404bcf3c56e6",
+            "type": "commit",
+            "links": {
+              "self": {
+                "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/72f6498c040bdfa21a119c54a257404bcf3c56e6"
+              },
+              "html": {
+                "href": "https://bitbucket.org/seanfarley/mercurial/commits/72f6498c040bdfa21a119c54a257404bcf3c56e6"
+              }
+            }
+          }
+        ],
+        "date": "2018-04-20T11:54:32+00:00",
+        "message": "test-check-code: prevent from adding Python modules shadowed by ancient C",
+        "type": "commit"
+      }
+    },
+    {
+      "name": "4.6rc0",
+      "links": {
+        "commits": {
+          "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commits/4.6rc0"
+        },
+        "self": {
+          "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/refs/tags/4.6rc0"
+        },
+        "html": {
+          "href": "https://bitbucket.org/seanfarley/mercurial/commits/tag/4.6rc0"
+        }
+      },
+      "tagger": null,
+      "date": null,
+      "message": null,
+      "type": "tag",
+      "target": {
+        "hash": "ed5448edcbfa747b9154099e18630e49024fd47b",
+        "repository": {
+          "links": {
+            "self": {
+              "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial"
+            },
+            "html": {
+              "href": "https://bitbucket.org/seanfarley/mercurial"
+            },
+            "avatar": {
+              "href": "https://bytebucket.org/ravatar/%7B73dcbd61-e506-4fc1-9ecd-31be2b6d6031%7D?ts=default"
+            }
+          },
+          "type": "repository",
+          "name": "mercurial",
+          "full_name": "seanfarley/mercurial",
+          "uuid": "{73dcbd61-e506-4fc1-9ecd-31be2b6d6031}"
+        },
+        "links": {
+          "self": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/ed5448edcbfa747b9154099e18630e49024fd47b"
+          },
+          "comments": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/ed5448edcbfa747b9154099e18630e49024fd47b/comments"
+          },
+          "html": {
+            "href": "https://bitbucket.org/seanfarley/mercurial/commits/ed5448edcbfa747b9154099e18630e49024fd47b"
+          },
+          "diff": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/diff/ed5448edcbfa747b9154099e18630e49024fd47b"
+          },
+          "approve": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/ed5448edcbfa747b9154099e18630e49024fd47b/approve"
+          },
+          "statuses": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/ed5448edcbfa747b9154099e18630e49024fd47b/statuses"
+          }
+        },
+        "author": {
+          "raw": "Augie Fackler <augie@google.com>",
+          "type": "author"
+        },
+        "parents": [
+          {
+            "hash": "fb92df8b634c1ff7593140a6eefc8a6c902136cd",
+            "type": "commit",
+            "links": {
+              "self": {
+                "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/fb92df8b634c1ff7593140a6eefc8a6c902136cd"
+              },
+              "html": {
+                "href": "https://bitbucket.org/seanfarley/mercurial/commits/fb92df8b634c1ff7593140a6eefc8a6c902136cd"
+              }
+            }
+          },
+          {
+            "hash": "92213f6745ed6f2c50feca9a2261b6f33a9a32fa",
+            "type": "commit",
+            "links": {
+              "self": {
+                "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/92213f6745ed6f2c50feca9a2261b6f33a9a32fa"
+              },
+              "html": {
+                "href": "https://bitbucket.org/seanfarley/mercurial/commits/92213f6745ed6f2c50feca9a2261b6f33a9a32fa"
+              }
+            }
+          }
+        ],
+        "date": "2018-04-18T19:32:08+00:00",
+        "message": "merge with default to begin 4.6 freeze\n\n# no-check-commit because of many vendored packages",
+        "type": "commit"
+      }
+    },
+    {
+      "name": "2.8-rc",
+      "links": {
+        "commits": {
+          "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commits/2.8-rc"
+        },
+        "self": {
+          "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/refs/tags/2.8-rc"
+        },
+        "html": {
+          "href": "https://bitbucket.org/seanfarley/mercurial/commits/tag/2.8-rc"
+        }
+      },
+      "tagger": null,
+      "date": null,
+      "message": null,
+      "type": "tag",
+      "target": {
+        "hash": "1596f2d8f2421314b1ddead8f7d0c91009358994",
+        "repository": {
+          "links": {
+            "self": {
+              "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial"
+            },
+            "html": {
+              "href": "https://bitbucket.org/seanfarley/mercurial"
+            },
+            "avatar": {
+              "href": "https://bytebucket.org/ravatar/%7B73dcbd61-e506-4fc1-9ecd-31be2b6d6031%7D?ts=default"
+            }
+          },
+          "type": "repository",
+          "name": "mercurial",
+          "full_name": "seanfarley/mercurial",
+          "uuid": "{73dcbd61-e506-4fc1-9ecd-31be2b6d6031}"
+        },
+        "links": {
+          "self": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/1596f2d8f2421314b1ddead8f7d0c91009358994"
+          },
+          "comments": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/1596f2d8f2421314b1ddead8f7d0c91009358994/comments"
+          },
+          "html": {
+            "href": "https://bitbucket.org/seanfarley/mercurial/commits/1596f2d8f2421314b1ddead8f7d0c91009358994"
+          },
+          "diff": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/diff/1596f2d8f2421314b1ddead8f7d0c91009358994"
+          },
+          "approve": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/1596f2d8f2421314b1ddead8f7d0c91009358994/approve"
+          },
+          "statuses": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/1596f2d8f2421314b1ddead8f7d0c91009358994/statuses"
+          }
+        },
+        "author": {
+          "raw": "Matt Mackall <mpm@selenic.com>",
+          "type": "author",
+          "user": {
+            "username": "mpmselenic",
+            "display_name": "Matt Mackall",
+            "account_id": null,
+            "links": {
+              "self": {
+                "href": "https://api.bitbucket.org/2.0/users/mpmselenic"
+              },
+              "html": {
+                "href": "https://bitbucket.org/mpmselenic/"
+              },
+              "avatar": {
+                "href": "https://bitbucket.org/account/mpmselenic/avatar/"
+              }
+            },
+            "nickname": "mpmselenic",
+            "type": "user",
+            "uuid": "{a4934530-db4c-419c-a478-9ab4964c2ee7}"
+          }
+        },
+        "parents": [
+          {
+            "hash": "f91e932b2cfead1675bc13c154820eeeabc0469b",
+            "type": "commit",
+            "links": {
+              "self": {
+                "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/f91e932b2cfead1675bc13c154820eeeabc0469b"
+              },
+              "html": {
+                "href": "https://bitbucket.org/seanfarley/mercurial/commits/f91e932b2cfead1675bc13c154820eeeabc0469b"
+              }
+            }
+          },
+          {
+            "hash": "8179eb28983b398b100e0679d0e6d5f89f0796e7",
+            "type": "commit",
+            "links": {
+              "self": {
+                "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/8179eb28983b398b100e0679d0e6d5f89f0796e7"
+              },
+              "html": {
+                "href": "https://bitbucket.org/seanfarley/mercurial/commits/8179eb28983b398b100e0679d0e6d5f89f0796e7"
+              }
+            }
+          }
+        ],
+        "date": "2013-10-20T23:43:11+00:00",
+        "message": "merge default into stable for 2.8 freeze",
+        "type": "commit"
+      }
+    },
+    {
+      "name": "0.5b",
+      "links": {
+        "commits": {
+          "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commits/0.5b"
+        },
+        "self": {
+          "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/refs/tags/0.5b"
+        },
+        "html": {
+          "href": "https://bitbucket.org/seanfarley/mercurial/commits/tag/0.5b"
+        }
+      },
+      "tagger": null,
+      "date": null,
+      "message": null,
+      "type": "tag",
+      "target": {
+        "hash": "0a28dfe59f8fab54a5118c5be4f40da34a53cdb7",
+        "repository": {
+          "links": {
+            "self": {
+              "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial"
+            },
+            "html": {
+              "href": "https://bitbucket.org/seanfarley/mercurial"
+            },
+            "avatar": {
+              "href": "https://bytebucket.org/ravatar/%7B73dcbd61-e506-4fc1-9ecd-31be2b6d6031%7D?ts=default"
+            }
+          },
+          "type": "repository",
+          "name": "mercurial",
+          "full_name": "seanfarley/mercurial",
+          "uuid": "{73dcbd61-e506-4fc1-9ecd-31be2b6d6031}"
+        },
+        "links": {
+          "self": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/0a28dfe59f8fab54a5118c5be4f40da34a53cdb7"
+          },
+          "comments": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/0a28dfe59f8fab54a5118c5be4f40da34a53cdb7/comments"
+          },
+          "patch": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/patch/0a28dfe59f8fab54a5118c5be4f40da34a53cdb7"
+          },
+          "html": {
+            "href": "https://bitbucket.org/seanfarley/mercurial/commits/0a28dfe59f8fab54a5118c5be4f40da34a53cdb7"
+          },
+          "diff": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/diff/0a28dfe59f8fab54a5118c5be4f40da34a53cdb7"
+          },
+          "approve": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/0a28dfe59f8fab54a5118c5be4f40da34a53cdb7/approve"
+          },
+          "statuses": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/0a28dfe59f8fab54a5118c5be4f40da34a53cdb7/statuses"
+          }
+        },
+        "author": {
+          "raw": "mpm@selenic.com",
+          "type": "author"
+        },
+        "parents": [
+          {
+            "hash": "5d8553352d2ee495b48e76cc9285173ac7e5ecaf",
+            "type": "commit",
+            "links": {
+              "self": {
+                "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/5d8553352d2ee495b48e76cc9285173ac7e5ecaf"
+              },
+              "html": {
+                "href": "https://bitbucket.org/seanfarley/mercurial/commits/5d8553352d2ee495b48e76cc9285173ac7e5ecaf"
+              }
+            }
+          }
+        ],
+        "date": "2005-05-30T16:27:21+00:00",
+        "message": "Bump the version number to 0.5b for the protocol change\n\n-----BEGIN PGP SIGNED MESSAGE-----\nHash: SHA1\n\nBump the version number to 0.5b for the protocol change\n\nmanifest hash: a7930fa15b716eb90613bd761b47c27331ea4b8b\n-----BEGIN PGP SIGNATURE-----\nVersion: GnuPG v1.4.0 (GNU/Linux)\n\niD8DBQFCmz7pywK+sNU5EO8RAt7dAJ4qmUpDRS7/JP/JpLm8uXZ0c+5W/ACfVb0Q\n99rjYslSjJfOWYLCKiAzVyU=\n=WVVg\n-----END PGP SIGNATURE-----\n",
+        "type": "commit"
+      }
+    },
+    {
+      "name": "3.9.2",
+      "links": {
+        "commits": {
+          "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commits/3.9.2"
+        },
+        "self": {
+          "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/refs/tags/3.9.2"
+        },
+        "html": {
+          "href": "https://bitbucket.org/seanfarley/mercurial/commits/tag/3.9.2"
+        }
+      },
+      "tagger": null,
+      "date": null,
+      "message": null,
+      "type": "tag",
+      "target": {
+        "hash": "149433e68974eb5c63ccb03f794d8b57339a80c4",
+        "repository": {
+          "links": {
+            "self": {
+              "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial"
+            },
+            "html": {
+              "href": "https://bitbucket.org/seanfarley/mercurial"
+            },
+            "avatar": {
+              "href": "https://bytebucket.org/ravatar/%7B73dcbd61-e506-4fc1-9ecd-31be2b6d6031%7D?ts=default"
+            }
+          },
+          "type": "repository",
+          "name": "mercurial",
+          "full_name": "seanfarley/mercurial",
+          "uuid": "{73dcbd61-e506-4fc1-9ecd-31be2b6d6031}"
+        },
+        "links": {
+          "self": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/149433e68974eb5c63ccb03f794d8b57339a80c4"
+          },
+          "comments": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/149433e68974eb5c63ccb03f794d8b57339a80c4/comments"
+          },
+          "patch": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/patch/149433e68974eb5c63ccb03f794d8b57339a80c4"
+          },
+          "html": {
+            "href": "https://bitbucket.org/seanfarley/mercurial/commits/149433e68974eb5c63ccb03f794d8b57339a80c4"
+          },
+          "diff": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/diff/149433e68974eb5c63ccb03f794d8b57339a80c4"
+          },
+          "approve": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/149433e68974eb5c63ccb03f794d8b57339a80c4/approve"
+          },
+          "statuses": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/149433e68974eb5c63ccb03f794d8b57339a80c4/statuses"
+          }
+        },
+        "author": {
+          "raw": "Augie Fackler <augie@google.com>",
+          "type": "author"
+        },
+        "parents": [
+          {
+            "hash": "7fa0115550464dd278904fba94c0d12b3744964f",
+            "type": "commit",
+            "links": {
+              "self": {
+                "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/7fa0115550464dd278904fba94c0d12b3744964f"
+              },
+              "html": {
+                "href": "https://bitbucket.org/seanfarley/mercurial/commits/7fa0115550464dd278904fba94c0d12b3744964f"
+              }
+            }
+          }
+        ],
+        "date": "2016-09-23T18:37:15+00:00",
+        "message": "py3: update test expectation on stable",
+        "type": "commit"
+      }
+    },
+    {
+      "name": "3.9.1",
+      "links": {
+        "commits": {
+          "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commits/3.9.1"
+        },
+        "self": {
+          "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/refs/tags/3.9.1"
+        },
+        "html": {
+          "href": "https://bitbucket.org/seanfarley/mercurial/commits/tag/3.9.1"
+        }
+      },
+      "tagger": null,
+      "date": null,
+      "message": null,
+      "type": "tag",
+      "target": {
+        "hash": "ccd436f7db6d5d7b9af89715179b911d031d44f1",
+        "repository": {
+          "links": {
+            "self": {
+              "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial"
+            },
+            "html": {
+              "href": "https://bitbucket.org/seanfarley/mercurial"
+            },
+            "avatar": {
+              "href": "https://bytebucket.org/ravatar/%7B73dcbd61-e506-4fc1-9ecd-31be2b6d6031%7D?ts=default"
+            }
+          },
+          "type": "repository",
+          "name": "mercurial",
+          "full_name": "seanfarley/mercurial",
+          "uuid": "{73dcbd61-e506-4fc1-9ecd-31be2b6d6031}"
+        },
+        "links": {
+          "self": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/ccd436f7db6d5d7b9af89715179b911d031d44f1"
+          },
+          "comments": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/ccd436f7db6d5d7b9af89715179b911d031d44f1/comments"
+          },
+          "patch": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/patch/ccd436f7db6d5d7b9af89715179b911d031d44f1"
+          },
+          "html": {
+            "href": "https://bitbucket.org/seanfarley/mercurial/commits/ccd436f7db6d5d7b9af89715179b911d031d44f1"
+          },
+          "diff": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/diff/ccd436f7db6d5d7b9af89715179b911d031d44f1"
+          },
+          "approve": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/ccd436f7db6d5d7b9af89715179b911d031d44f1/approve"
+          },
+          "statuses": {
+            "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/ccd436f7db6d5d7b9af89715179b911d031d44f1/statuses"
+          }
+        },
+        "author": {
+          "raw": "Akihiko Odaki <akihiko.odaki.4i@stu.hosei.ac.jp>",
+          "type": "author"
+        },
+        "parents": [
+          {
+            "hash": "0f90249a65472ae6d3177880dcdc8a6a16eadaa2",
+            "type": "commit",
+            "links": {
+              "self": {
+                "href": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/commit/0f90249a65472ae6d3177880dcdc8a6a16eadaa2"
+              },
+              "html": {
+                "href": "https://bitbucket.org/seanfarley/mercurial/commits/0f90249a65472ae6d3177880dcdc8a6a16eadaa2"
+              }
+            }
+          }
+        ],
+        "date": "2016-09-01T18:16:55+00:00",
+        "message": "bundle2: localize handleoutput remote prompts\n\nCode archaeology suggests that there was no good reason for this not to\nbe localized. 'remote: ' is already localized elsewhere.",
+        "type": "commit"
+      }
+    }
+  ],
+  "page": 1,
+  "next": "https://api.bitbucket.org/2.0/repositories/seanfarley/mercurial/refs/tags?page=8xhd"
+}
