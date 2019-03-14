@@ -8,7 +8,7 @@ case class PaginatedResponse[A](
                                  pagelen: Int,
                                  next: Option[String],
                                  previous: Option[String],
-                                 values: Vector[A]
+                                 values: Vector[A],
                                )
 
 case class BBLink(href: String)
@@ -41,7 +41,7 @@ case class BBCommit(
 case class BBAuthor(
                      raw: String,
                      `type`: String,
-                     user: Option[BBUser]
+                     user: Option[BBUser],
                    )
 
 case class BBUser(

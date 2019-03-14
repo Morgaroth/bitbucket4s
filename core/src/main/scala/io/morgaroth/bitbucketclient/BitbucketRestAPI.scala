@@ -2,13 +2,14 @@ package io.morgaroth.bitbucketclient
 
 import cats.Monad
 import cats.data.EitherT
-import com.typesafe.scalalogging.LazyLogging
+import com.typesafe.scalalogging.{LazyLogging, Logger}
 import io.circe.Decoder
 import io.circe.generic.auto._
 import io.morgaroth.bitbucketclient.marshalling.Bitbucket4sMarshalling
 import io.morgaroth.bitbucketclient.models._
 import io.morgaroth.bitbucketclient.query.syntax.SearchQuery._
 import io.morgaroth.bitbucketclient.query.{BitbucketRequest, Methods, PRStateQ, SearchQ}
+import org.slf4j.LoggerFactory
 
 import scala.language.{higherKinds, postfixOps}
 
@@ -26,7 +27,7 @@ trait BitbucketRestAPI[F[_]] extends LazyLogging with Bitbucket4sMarshalling {
 
   private def getAllPaginatedResponse[A: Decoder](req: BitbucketRequest): EitherT[F, BitbucketError, Vector[A]] = {
     def getAll(nextLink: String, acc: Vector[A]): EitherT[F, BitbucketError, Vector[A]] = {
-      logger.info(s"Invoking next with $nextLink")
+      logger.debug(s"Invoking next with $nextLink")
       invokeRequest(rawRequest(nextLink)).flatMap(MJson.readT[F, PaginatedResponse[A]]).flatMap { result =>
         result.next.map { nextLink =>
           getAll(nextLink, acc ++ result.values)
