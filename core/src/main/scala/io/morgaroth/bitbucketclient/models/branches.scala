@@ -2,26 +2,43 @@ package io.morgaroth.bitbucketclient.models
 
 import org.joda.time.DateTime
 
-trait BBBranchType {
+trait BBEntityType {
   def repr: String
 
 }
 
-object BBBranchType {
-  val all: Seq[BBBranchType] = Seq(NamedBranch)
-  val byName: Map[String, BBBranchType] = all.map(x => x.repr -> x).toMap
-}
+object BBEntityType {
+  val all: Seq[BBEntityType] = Seq(Repository, NamedBranch, Branch, Commit, PullRequest, Tag, Rendered, User, Author)
+  val byName: Map[String, BBEntityType] = all.map(x => x.repr -> x).toMap
 
-case object NamedBranch extends BBBranchType {
-  override val repr: String = "named_branch"
+  abstract class BBEntityTypeBase(val repr: String) extends BBEntityType
+
+  case object Repository extends BBEntityTypeBase("repository")
+
+  case object NamedBranch extends BBEntityTypeBase("named_branch")
+
+  case object Branch extends BBEntityTypeBase("branch")
+
+  case object Commit extends BBEntityTypeBase("commit")
+
+  case object PullRequest extends BBEntityTypeBase("pullrequest")
+
+  case object Tag extends BBEntityTypeBase("tag")
+
+  case object Rendered extends BBEntityTypeBase("rendered")
+
+  case object User extends BBEntityTypeBase("user")
+
+  case object Author extends BBEntityTypeBase("author")
+
 }
 
 case class BBBranch(
-                     heads: Vector[BBCommit],
+                     heads: Option[Vector[BBCommit]],
                      name: String,
                      default_merge_strategy: MergeStrategy,
                      merge_strategies: Vector[MergeStrategy],
-                     `type`: BBBranchType,
+                     `type`: BBEntityType,
                      links: BBLinksCommits,
                      target: BBBranchTarget,
                    )
@@ -39,5 +56,5 @@ case class BBBranchTarget(
                            parents: Vector[BBCommit],
                            date: DateTime,
                            message: String,
-                           `type`: String,
+                           `type`: BBEntityType,
                          )

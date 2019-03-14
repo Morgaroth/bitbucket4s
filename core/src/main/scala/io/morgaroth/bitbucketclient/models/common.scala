@@ -28,19 +28,19 @@ case class BBRepository(
                          uuid: Option[UUID],
                          full_name: String,
                          name: String,
-                         `type`: String,
+                         `type`: BBEntityType,
                          links: BBLinksAvatar,
                        )
 
 case class BBCommit(
                      hash: String,
-                     `type`: String,
+                     `type`: BBEntityType,
                      links: BBMinimalLinks,
                    )
 
 case class BBAuthor(
                      raw: String,
-                     `type`: String,
+                     `type`: BBEntityType,
                      user: Option[BBUser],
                    )
 
@@ -49,7 +49,7 @@ case class BBUser(
                    nickname: String,
                    display_name: String,
                    account_id: Option[String],
-                   `type`: String,
+                   `type`: BBEntityType,
                    links: BBLinksAvatar,
                    uuid: UUID,
                  ) {

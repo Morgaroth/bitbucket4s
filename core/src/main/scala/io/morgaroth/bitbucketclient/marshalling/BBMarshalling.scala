@@ -14,7 +14,7 @@ import scala.language.{higherKinds, implicitConversions}
 
 trait Bitbucket4sMarshalling extends JodaCodec
   with BBUUUIDCodec
-  with BranchTypeCodec
+  with EntityTypeCodec
   with PullRequestStateCodec
   with MergeStrategyCodec {
 

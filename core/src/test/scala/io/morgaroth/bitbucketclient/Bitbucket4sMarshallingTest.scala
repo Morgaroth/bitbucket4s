@@ -25,6 +25,16 @@ class Bitbucket4sMarshallingTest extends FlatSpec with Matchers with Bitbucket4s
     result shouldBe 'right
   }
 
+  it should "load branches list 2" in {
+    val result = MJson.read[PaginatedResponse[BBBranch]](Source.fromResource("real_response_from_search_branches_request_2.json").mkString)
+    result shouldBe 'right
+  }
+
+  it should "load branches list without heads" in {
+    val result = MJson.read[PaginatedResponse[BBBranch]](Source.fromResource("real_response_from_search_branches_request.json").mkString)
+    result shouldBe 'right
+  }
+
   it should "load tags list" in {
     val result = MJson.read[PaginatedResponse[BBTag]](Source.fromResource("tag_list.json").mkString)
     result shouldBe 'right

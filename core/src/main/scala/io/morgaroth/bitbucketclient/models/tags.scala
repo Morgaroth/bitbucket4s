@@ -8,7 +8,7 @@ case class BBTag(
                   tagger: Option[BBUser],
                   date: Option[DateTime],
                   message: Option[String],
-                  `type`: String,
+                  `type`: BBEntityType,
                   target: BBTagTarget
                 )
 
@@ -20,7 +20,7 @@ case class BBTagTarget(
                         links: BBTagTargetLinks,
                         date: DateTime,
                         message: String,
-                        `type`: String,
+                        `type`: BBEntityType,
 
                       )
 

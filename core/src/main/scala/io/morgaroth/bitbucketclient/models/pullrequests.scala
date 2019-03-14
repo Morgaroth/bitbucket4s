@@ -36,7 +36,7 @@ case class BBPRSideSpec(
 case class BBPullRequest(
                           description: String,
                           title: String,
-                          `type`: String,
+                          `type`: BBEntityType,
                           close_source_branch: Boolean,
                           id: Long,
                           destination: BBPRSideSpec,
@@ -52,7 +52,7 @@ case class BBPullRequest(
 case class BBPullRequestCompleteInfo(
                                       description: String,
                                       title: String,
-                                      `type`: String,
+                                      `type`: BBEntityType,
                                       close_source_branch: Boolean,
                                       id: Long,
                                       destination: BBPRSideSpec,
@@ -69,7 +69,7 @@ case class BBPullRequestCompleteInfo(
 case class BBPullrequestSummary(
                                  raw: String,
                                  markup: String,
-                                 `type`: String,
+                                 `type`: BBEntityType,
                                  html: String,
                                )
 
