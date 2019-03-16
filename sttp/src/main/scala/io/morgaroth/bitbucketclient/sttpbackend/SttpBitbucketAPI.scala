@@ -1,7 +1,5 @@
 package io.morgaroth.bitbucketclient.sttpbackend
 
-import java.util.UUID
-
 import cats.Monad
 import cats.data.EitherT
 import cats.instances.future.catsStdInstancesForFuture
@@ -22,9 +20,7 @@ class SttpBitbucketAPI(val config: BitbucketConfig, apiConfig: BitbucketRestAPIC
   implicit val backend: SttpBackend[Try, Nothing] = TryHttpURLConnectionBackend()
   private val requestsLogger = Logger(LoggerFactory.getLogger(getClass.getPackage.getName + ".requests"))
 
-  override def invokeRequest(requestData: BitbucketRequest): EitherT[Future, BitbucketError, String] = {
-    val requestId = UUID.randomUUID().toString
-
+  override def invokeRequest(requestData: BitbucketRequest)(implicit requestId: RequestId): EitherT[Future, BitbucketError, String] = {
     val u = requestData.render
     val requestWithoutPayload = sttp.method(requestData.method, uri"$u").headers(
       "Authorization" -> requestData.authToken,
@@ -37,17 +33,15 @@ class SttpBitbucketAPI(val config: BitbucketConfig, apiConfig: BitbucketRestAPIC
     }.getOrElse(requestWithoutPayload)
 
     if (apiConfig.debug) logger.debug(s"request to send: $request")
-    requestsLogger.info(s"Request ID {}, request: {}, payload:\n{}", requestId, request.body("stripped"), request.body)
+    requestsLogger.info(s"Request ID {}, request: {}, payload:\n{}", requestId.id, request.body("removed for log"), request.body)
 
     val response = request
       .send()
-      .toEither.leftMap[BitbucketError](BBRequestingError("try-http-backend-left", _))
+      .toEither.leftMap[BitbucketError](BBRequestingError("try-http-backend-left", requestId.id, _))
       .flatMap { response =>
         if (apiConfig.debug) logger.debug(s"received request: $response")
-
-        requestsLogger.info(s"Response ID {}, response: {}, payload:\n{}", requestId, response.copy(rawErrorBody = Right("stripped")), response.body.fold(identity, identity))
-
-        response.rawErrorBody.leftMap(error => BBHttpError(response.code.intValue(), "http-response-error", Some(new String(error, "UTF-8"))))
+        requestsLogger.info(s"Request ID {}, response: {}, payload:\n{}", requestId, response.copy(rawErrorBody = Right("removed for log")), response.body.fold(identity, identity))
+        response.rawErrorBody.leftMap(error => BBHttpError(response.code.intValue(), "http-response-error", requestId.id, Some(new String(error, "UTF-8"))))
       }
 
     EitherT.fromEither(response)

@@ -45,7 +45,7 @@
           "type": "commit",
           "links": {
             "self": {
-              "href": "https://api.bitbucket.org/2.0/repositories/test-group/test-project/commit/9c4c253fd2fb"
+              "href": "https://api.bitbucket.org/2.0/repositories/test-group/test-project/dsafdsa"
             },
             "html": {
               "href": "https://bitbucket.org/test-group/test-project/commits/9c4c253fd2fb"
@@ -86,7 +86,7 @@
           "type": "commit",
           "links": {
             "self": {
-              "href": "https://api.bitbucket.org/2.0/repositories/test-group/test-project/commit/ds34j48fjfs4"
+              "href": "https://api.bitbucket.org/2.0/repositories/test-group/test-project/dsafdsa"
             },
             "html": {
               "href": "https://bitbucket.org/test-group/test-project/commits/ds34j48fjfs4"
@@ -111,7 +111,7 @@
           "uuid": "{b191c448-5028-4347-8a2b-62fa349ebc9d}"
         },
         "branch": {
-          "name": "feature/whbe-2048-account-ids-to-string"
+          "name": "feature/ABCD-2314-dsafdsa"
         }
       },
       "comment_count": 2,
@@ -143,7 +143,7 @@
         "type": "commit",
         "links": {
           "self": {
-            "href": "https://api.bitbucket.org/2.0/repositories/test-group/test-project/commit/ds34j48fjfs4"
+            "href": "https://api.bitbucket.org/2.0/repositories/test-group/test-project/dsafdsa"
           },
           "html": {
             "href": "https://bitbucket.org/test-group/test-project/commits/ds34j48fjfs4"

@@ -2,14 +2,13 @@ package io.morgaroth.bitbucketclient
 
 import cats.Monad
 import cats.data.EitherT
-import com.typesafe.scalalogging.{LazyLogging, Logger}
+import com.typesafe.scalalogging.LazyLogging
 import io.circe.Decoder
 import io.circe.generic.auto._
 import io.morgaroth.bitbucketclient.marshalling.Bitbucket4sMarshalling
 import io.morgaroth.bitbucketclient.models._
 import io.morgaroth.bitbucketclient.query.syntax.SearchQuery._
 import io.morgaroth.bitbucketclient.query.{BitbucketRequest, Methods, PRStateQ, SearchQ}
-import org.slf4j.LoggerFactory
 
 import scala.language.{higherKinds, postfixOps}
 
@@ -23,10 +22,11 @@ trait BitbucketRestAPI[F[_]] extends LazyLogging with Bitbucket4sMarshalling {
   private val regGen = BitbucketRequest.forServer(config)
   private val rawRequest = BitbucketRequest.rawGetRequests(config)
 
-  protected def invokeRequest(request: BitbucketRequest): EitherT[F, BitbucketError, String]
+  protected def invokeRequest(request: BitbucketRequest)(implicit requestId: RequestId): EitherT[F, BitbucketError, String]
 
   private def getAllPaginatedResponse[A: Decoder](req: BitbucketRequest): EitherT[F, BitbucketError, Vector[A]] = {
     def getAll(nextLink: String, acc: Vector[A]): EitherT[F, BitbucketError, Vector[A]] = {
+      implicit val rId: RequestId = RequestId.newOne
       logger.debug(s"Invoking next with $nextLink")
       invokeRequest(rawRequest(nextLink)).flatMap(MJson.readT[F, PaginatedResponse[A]]).flatMap { result =>
         result.next.map { nextLink =>
@@ -34,9 +34,11 @@ trait BitbucketRestAPI[F[_]] extends LazyLogging with Bitbucket4sMarshalling {
         }.getOrElse(EitherT.pure(acc ++ result.values))
       }
     }
-
-    invokeRequest(req).flatMap(MJson.readT[F, PaginatedResponse[A]]).flatMap { first =>
-      first.next.map(nextLink => getAll(nextLink, first.values)).getOrElse(EitherT.pure(first.values))
+    {
+      implicit val rId2: RequestId = RequestId.newOne
+      invokeRequest(req).flatMap(MJson.readT[F, PaginatedResponse[A]]).flatMap { first =>
+        first.next.map(nextLink => getAll(nextLink, first.values)).getOrElse(EitherT.pure(first.values))
+      }
     }
   }
 
@@ -120,6 +122,7 @@ trait BitbucketRestAPI[F[_]] extends LazyLogging with Bitbucket4sMarshalling {
     *
     */
   def getPullRequest(repoId: String, pullRequestId: Long): EitherT[F, BitbucketError, BBPullRequestCompleteInfo] = {
+    implicit val rId: RequestId = RequestId.newOne
     val req = regGen(Methods.Get, API + s"repositories/$repoId/pullrequests/$pullRequestId", Nil, None)
     invokeRequest(req).flatMap(MJson.readT[F, BBPullRequestCompleteInfo])
   }
@@ -135,6 +138,7 @@ trait BitbucketRestAPI[F[_]] extends LazyLogging with Bitbucket4sMarshalling {
     reviewers: List[BBUserUsername],
     closeBranch: Boolean,
   ): EitherT[F, BitbucketError, BBPullRequest] = {
+    implicit val rId: RequestId = RequestId.newOne
     val data = BBPullRequestUpdate(title, description, reviewers, closeBranch)
     val req = regGen(Methods.Put, API + s"repositories/$repoId/pullrequests/$pullRequestId", Nil, Some(MJson.write(data)))
     invokeRequest(req).flatMap(MJson.readT[F, BBPullRequest])

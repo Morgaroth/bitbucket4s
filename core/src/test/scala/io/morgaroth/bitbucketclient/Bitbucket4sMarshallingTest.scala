@@ -9,7 +9,7 @@ import scala.io.Source
 
 class Bitbucket4sMarshallingTest extends FlatSpec with Matchers with Bitbucket4sMarshalling {
 
-  behavior of "ProjectsJsonFormats"
+  behavior of "Bitbucket4sMarshalling"
 
   it should "read correctly with merge_commit" in {
     val result = MJson.read[PaginatedResponse[BBPullRequest]](Source.fromResource("sample_prs_with_merge_commit.json").mkString)
@@ -17,7 +17,6 @@ class Bitbucket4sMarshallingTest extends FlatSpec with Matchers with Bitbucket4s
     result.right.get.values should have size 1
 
     result.right.get.values.head.merge_commit shouldBe defined
-    println(result.right.get.values.head.merge_commit)
   }
 
   it should "load branches list" in {

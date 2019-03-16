@@ -1,9 +1,9 @@
 {
   "rendered": {
     "description": {
-      "raw": "with some updates\r\n\r\n==============================  \r\n[Jira ticket WHBE-3011](https://jira.willhillatlas.com/browse/WHBE-3011)\r\n\r\nCompanion PRs:  \r\n[#119 in the QA tests](https://bitbucket.org/code-factory-group/wh-tests/pull-requests/119)\r\n\r\n[CI E2E Tests runner](https://jenkins-krk.whbettingengine.com/job/_features/job/whbe-3011/build?delay=0sec)  \n  \n==============================  \n[Jira ticket WHBE-3011](https://jira.willhillatlas.com/browse/WHBE-3011)  \n  \nCompanion PRs:  \n[#119 in the QA tests](https://bitbucket.org/code-factory-group/wh-tests/pull-requests/119)  \n  \n[CI E2E Tests runner](https://jenkins-krk.whbettingengine.com/job/_features/job/whbe-3011/build?delay=0sec)",
+      "raw": "with some updates\r\n\r\n==============================  \r\n[Jira ticket ABCD-2314-dsafdsa",
       "markup": "markdown",
-      "html": "<p>with some updates</p>\n<p>==============================<br />\n<a data-is-external-link=\"true\" href=\"https://jira.willhillatlas.com/browse/WHBE-3011\" rel=\"nofollow\">Jira ticket WHBE-3011</a></p>\n<p>Companion PRs:<br />\n<a data-is-external-link=\"true\" href=\"https://bitbucket.org/code-factory-group/wh-tests/pull-requests/119\" rel=\"nofollow\">#119 in the QA tests</a></p>\n<p><a data-is-external-link=\"true\" href=\"https://jenkins-krk.whbettingengine.com/job/_features/job/whbe-3011/build?delay=0sec\" rel=\"nofollow\">CI E2E Tests runner</a>  </p>\n<p>==============================<br />\n<a data-is-external-link=\"true\" href=\"https://jira.willhillatlas.com/browse/WHBE-3011\" rel=\"nofollow\">Jira ticket WHBE-3011</a>  </p>\n<p>Companion PRs:<br />\n<a data-is-external-link=\"true\" href=\"https://bitbucket.org/code-factory-group/wh-tests/pull-requests/119\" rel=\"nofollow\">#119 in the QA tests</a>  </p>\n<p><a data-is-external-link=\"true\" href=\"https://jenkins-krk.whbettingengine.com/job/_features/job/whbe-3011/build?delay=0sec\" rel=\"nofollow\">CI E2E Tests runner</a></p>",
+      "html": "<p>with some updates</p>\n<p>==============================<br />\n<a data-is-external-link=\"true\" href=\"https://jira.willhillatlas.com/browse/ABCD-2314-dsafdsa",
       "type": "rendered"
     },
     "title": {
@@ -14,37 +14,37 @@
     }
   },
   "type": "pullrequest",
-  "description": "with some updates\r\n\r\n==============================  \r\n[Jira ticket WHBE-3011](https://jira.willhillatlas.com/browse/WHBE-3011)\r\n\r\nCompanion PRs:  \r\n[#119 in the QA tests](https://bitbucket.org/code-factory-group/wh-tests/pull-requests/119)\r\n\r\n[CI E2E Tests runner](https://jenkins-krk.whbettingengine.com/job/_features/job/whbe-3011/build?delay=0sec)  \n  \n==============================  \n[Jira ticket WHBE-3011](https://jira.willhillatlas.com/browse/WHBE-3011)  \n  \nCompanion PRs:  \n[#119 in the QA tests](https://bitbucket.org/code-factory-group/wh-tests/pull-requests/119)  \n  \n[CI E2E Tests runner](https://jenkins-krk.whbettingengine.com/job/_features/job/whbe-3011/build?delay=0sec)",
+  "description": "with some updates\r\n\r\n==============================  \r\n[Jira ticket ABCD-2314-dsafdsa",
   "links": {
     "decline": {
-      "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/pullrequests/185/decline"
+      "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/pullrequests/185/decline"
     },
     "commits": {
-      "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/pullrequests/185/commits"
+      "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/pullrequests/185/commits"
     },
     "self": {
-      "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/pullrequests/185"
+      "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/pullrequests/185"
     },
     "comments": {
-      "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/pullrequests/185/comments"
+      "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/pullrequests/185/comments"
     },
     "merge": {
-      "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/pullrequests/185/merge"
+      "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/pullrequests/185/merge"
     },
     "html": {
-      "href": "https://bitbucket.org/code-factory-group/wh-betting-service/pull-requests/185"
+      "href": "https://bitbucket.org/some-group/some-project/pull-requests/185"
     },
     "activity": {
-      "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/pullrequests/185/activity"
+      "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/pullrequests/185/activity"
     },
     "diff": {
-      "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/pullrequests/185/diff"
+      "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/pullrequests/185/diff"
     },
     "approve": {
-      "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/pullrequests/185/approve"
+      "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/pullrequests/185/approve"
     },
     "statuses": {
-      "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/pullrequests/185/statuses"
+      "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/pullrequests/185/statuses"
     }
   },
   "title": "added some d and fixed manual unsettlement logic",
@@ -115,28 +115,28 @@
       "type": "commit",
       "links": {
         "self": {
-          "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/commit/40e798719013"
+          "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/dsafdsa"
         },
         "html": {
-          "href": "https://bitbucket.org/code-factory-group/wh-betting-service/commits/40e798719013"
+          "href": "https://bitbucket.org/some-group/some-project/commits/40e798719013"
         }
       }
     },
     "repository": {
       "links": {
         "self": {
-          "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service"
+          "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project"
         },
         "html": {
-          "href": "https://bitbucket.org/code-factory-group/wh-betting-service"
+          "href": "https://bitbucket.org/some-group/some-project"
         },
         "avatar": {
           "href": "https://bytebucket.org/ravatar/%7Bdbf62b6b-78b1-4031-b785-7221118e47d1%7D?ts=default"
         }
       },
       "type": "repository",
-      "name": "wh-betting-service",
-      "full_name": "code-factory-group/wh-betting-service",
+      "name": "some-project",
+      "full_name": "some-group/some-project",
       "uuid": "{dbf62b6b-78b1-4031-b785-7221118e47d1}"
     },
     "branch": {
@@ -145,9 +145,9 @@
   },
   "created_on": "2019-03-04T21:15:06.620370+00:00",
   "summary": {
-    "raw": "with some updates\r\n\r\n==============================  \r\n[Jira ticket WHBE-3011](https://jira.willhillatlas.com/browse/WHBE-3011)\r\n\r\nCompanion PRs:  \r\n[#119 in the QA tests](https://bitbucket.org/code-factory-group/wh-tests/pull-requests/119)\r\n\r\n[CI E2E Tests runner](https://jenkins-krk.whbettingengine.com/job/_features/job/whbe-3011/build?delay=0sec)  \n  \n==============================  \n[Jira ticket WHBE-3011](https://jira.willhillatlas.com/browse/WHBE-3011)  \n  \nCompanion PRs:  \n[#119 in the QA tests](https://bitbucket.org/code-factory-group/wh-tests/pull-requests/119)  \n  \n[CI E2E Tests runner](https://jenkins-krk.whbettingengine.com/job/_features/job/whbe-3011/build?delay=0sec)",
+    "raw": "with some updates\r\n\r\n==============================  \r\n[Jira ticket ABCD-2314-dsafdsa",
     "markup": "markdown",
-    "html": "<p>with some updates</p>\n<p>==============================<br />\n<a data-is-external-link=\"true\" href=\"https://jira.willhillatlas.com/browse/WHBE-3011\" rel=\"nofollow\">Jira ticket WHBE-3011</a></p>\n<p>Companion PRs:<br />\n<a data-is-external-link=\"true\" href=\"https://bitbucket.org/code-factory-group/wh-tests/pull-requests/119\" rel=\"nofollow\">#119 in the QA tests</a></p>\n<p><a data-is-external-link=\"true\" href=\"https://jenkins-krk.whbettingengine.com/job/_features/job/whbe-3011/build?delay=0sec\" rel=\"nofollow\">CI E2E Tests runner</a>  </p>\n<p>==============================<br />\n<a data-is-external-link=\"true\" href=\"https://jira.willhillatlas.com/browse/WHBE-3011\" rel=\"nofollow\">Jira ticket WHBE-3011</a>  </p>\n<p>Companion PRs:<br />\n<a data-is-external-link=\"true\" href=\"https://bitbucket.org/code-factory-group/wh-tests/pull-requests/119\" rel=\"nofollow\">#119 in the QA tests</a>  </p>\n<p><a data-is-external-link=\"true\" href=\"https://jenkins-krk.whbettingengine.com/job/_features/job/whbe-3011/build?delay=0sec\" rel=\"nofollow\">CI E2E Tests runner</a></p>",
+    "html": "<p>with some updates</p>\n<p>==============================<br />\n<a data-is-external-link=\"true\" href=\"https://jira.willhillatlas.com/browse/ABCD-2314-dsafdsa",
     "type": "rendered"
   },
   "source": {
@@ -156,32 +156,32 @@
       "type": "commit",
       "links": {
         "self": {
-          "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/commit/4e38cf19cfaf"
+          "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/dsafdsa"
         },
         "html": {
-          "href": "https://bitbucket.org/code-factory-group/wh-betting-service/commits/4e38cf19cfaf"
+          "href": "https://bitbucket.org/some-group/some-project/commits/4e38cf19cfaf"
         }
       }
     },
     "repository": {
       "links": {
         "self": {
-          "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service"
+          "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project"
         },
         "html": {
-          "href": "https://bitbucket.org/code-factory-group/wh-betting-service"
+          "href": "https://bitbucket.org/some-group/some-project"
         },
         "avatar": {
           "href": "https://bytebucket.org/ravatar/%7Bdbf62b6b-78b1-4031-b785-7221118e47d1%7D?ts=default"
         }
       },
       "type": "repository",
-      "name": "wh-betting-service",
-      "full_name": "code-factory-group/wh-betting-service",
+      "name": "some-project",
+      "full_name": "some-group/some-project",
       "uuid": "{dbf62b6b-78b1-4031-b785-7221118e47d1}"
     },
     "branch": {
-      "name": "fix/whbe-3011-unsettle-twice-bug"
+      "name": "fix/ABCD-2314-dsafdsa"
     }
   },
   "comment_count": 0,

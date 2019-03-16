@@ -3,16 +3,16 @@
   "page": 1,
   "values": [
     {
-      "name": "feature/whbe-3307-perf-tests-after-technical-migrations",
+      "name": "feature/ABCD-2314-dsafdsa",
       "links": {
         "commits": {
-          "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/commits/feature/whbe-3307-perf-tests-after-technical-migrations"
+          "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/commits/feature/ABCD-2314-dsafdsa"
         },
         "self": {
-          "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/refs/branches/feature/whbe-3307-perf-tests-after-technical-migrations"
+          "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/refs/branches/feature/ABCD-2314-dsafdsa"
         },
         "html": {
-          "href": "https://bitbucket.org/code-factory-group/wh-betting-service/branch/feature/whbe-3307-perf-tests-after-technical-migrations"
+          "href": "https://bitbucket.org/some-group/some-project/branch/feature/ABCD-2314-dsafdsa"
         }
       },
       "default_merge_strategy": "merge_commit",
@@ -27,62 +27,62 @@
         "repository": {
           "links": {
             "self": {
-              "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service"
+              "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project"
             },
             "html": {
-              "href": "https://bitbucket.org/code-factory-group/wh-betting-service"
+              "href": "https://bitbucket.org/some-group/some-project"
             },
             "avatar": {
               "href": "https://bytebucket.org/ravatar/%7Bdbf62b6b-78b1-4031-b785-7221118e47d1%7D?ts=default"
             }
           },
           "type": "repository",
-          "name": "wh-betting-service",
-          "full_name": "code-factory-group/wh-betting-service",
+          "name": "some-project",
+          "full_name": "some-group/some-project",
           "uuid": "{dbf62b6b-78b1-4031-b785-7221118e47d1}"
         },
         "links": {
           "self": {
-            "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/commit/53b64a5d581cb5d87c31788f11c007eb63412a1d"
+            "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/dsafdsa"
           },
           "comments": {
-            "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/commit/53b64a5d581cb5d87c31788f11c007eb63412a1d/comments"
+            "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/dsafdsa"
           },
           "patch": {
-            "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/patch/53b64a5d581cb5d87c31788f11c007eb63412a1d"
+            "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/patch/53b64a5d581cb5d87c31788f11c007eb63412a1d"
           },
           "html": {
-            "href": "https://bitbucket.org/code-factory-group/wh-betting-service/commits/53b64a5d581cb5d87c31788f11c007eb63412a1d"
+            "href": "https://bitbucket.org/some-group/some-project/commits/53b64a5d581cb5d87c31788f11c007eb63412a1d"
           },
           "diff": {
-            "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/diff/53b64a5d581cb5d87c31788f11c007eb63412a1d"
+            "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/diff/53b64a5d581cb5d87c31788f11c007eb63412a1d"
           },
           "approve": {
-            "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/commit/53b64a5d581cb5d87c31788f11c007eb63412a1d/approve"
+            "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/dsafdsa"
           },
           "statuses": {
-            "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/commit/53b64a5d581cb5d87c31788f11c007eb63412a1d/statuses"
+            "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/dsafdsa"
           }
         },
         "author": {
-          "raw": "Mateusz Jaje <mateusz.jaje@grandparade.co.uk>",
+          "raw": "Mateusz Jaje <mateusz.jaje@gmail.com>",
           "type": "author",
           "user": {
-            "username": "mateusz_jaje_gp",
+            "username": "mj",
             "display_name": "Mateusz Jaje",
             "account_id": "557058:80e04138-bef1-4b0b-a909-bccaaa606b98",
             "links": {
               "self": {
-                "href": "https://api.bitbucket.org/2.0/users/mateusz_jaje_gp"
+                "href": "https://api.bitbucket.org/2.0/users/mj"
               },
               "html": {
-                "href": "https://bitbucket.org/mateusz_jaje_gp/"
+                "href": "https://bitbucket.org/mj/"
               },
               "avatar": {
-                "href": "https://bitbucket.org/account/mateusz_jaje_gp/avatar/"
+                "href": "https://bitbucket.org/account/mj/avatar/"
               }
             },
-            "nickname": "mateusz_jaje_gp",
+            "nickname": "mj",
             "type": "user",
             "uuid": "{14157abe-2dd3-47d1-a1eb-a95afa4323ff}"
           }
@@ -93,10 +93,10 @@
             "type": "commit",
             "links": {
               "self": {
-                "href": "https://api.bitbucket.org/2.0/repositories/code-factory-group/wh-betting-service/commit/bf8bb2033a4212eca421626ff76dc8d536397825"
+                "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/dsafdsa"
               },
               "html": {
-                "href": "https://bitbucket.org/code-factory-group/wh-betting-service/commits/bf8bb2033a4212eca421626ff76dc8d536397825"
+                "href": "https://bitbucket.org/some-group/some-project/commits/bf8bb2033a4212eca421626ff76dc8d536397825"
               }
             }
           }
