@@ -2,7 +2,7 @@ package io.morgaroth.bitbucketclient
 
 import io.circe.generic.auto._
 import io.morgaroth.bitbucketclient.marshalling.Bitbucket4sMarshalling
-import io.morgaroth.bitbucketclient.models.{BBBranch, BBPullRequest, BBTag, PaginatedResponse}
+import io.morgaroth.bitbucketclient.models._
 import org.scalatest.{FlatSpec, Matchers}
 
 import scala.io.Source
@@ -21,6 +21,17 @@ class Bitbucket4sMarshallingTest extends FlatSpec with Matchers with Bitbucket4s
 
   it should "load branches list" in {
     val result = MJson.read[PaginatedResponse[BBBranch]](Source.fromResource("branch_list.json").mkString)
+    result shouldBe 'right
+  }
+
+  it should "load pull request full info" in {
+    val result = MJson.read[BBPullRequestCompleteInfo](Source.fromResource("full_pr_info.json").mkString)
+    result shouldBe 'right
+    result.right.get.reviewers
+  }
+
+  it should "load pull request full info 2" in {
+    val result = MJson.read[BBPullRequestCompleteInfo](Source.fromResource("full_pr_info_2.json").mkString)
     result shouldBe 'right
   }
 

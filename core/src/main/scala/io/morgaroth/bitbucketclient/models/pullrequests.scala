@@ -92,9 +92,8 @@ object BBPullRequestStates {
 case class BBPullRequestReviewer(
                                   username: String,
                                   nickname: String,
-                                  account_status: String,
+                                  account_status: Option[String],
                                   display_name: String,
-                                  created_on: DateTime,
                                   uuid: UUID,
                                 ) {
   def asUsername = BBUserUsername(username)
