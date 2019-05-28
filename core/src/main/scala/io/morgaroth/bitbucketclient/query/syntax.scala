@@ -40,7 +40,7 @@ case class BitbucketRequest(
                              authToken: String,
                              method: Method,
                              path: String,
-                             query: List[ParamQuery],
+                             query: Vector[ParamQuery],
                              payload: Option[String],
                            ) {
   lazy val render: String = {
@@ -52,10 +52,10 @@ case class BitbucketRequest(
 }
 
 object BitbucketRequest {
-  def forServer(cfg: BitbucketConfig): (Method, String, List[ParamQuery], Option[String]) => BitbucketRequest =
+  def forServer(cfg: BitbucketConfig): (Method, String, Vector[ParamQuery], Option[String]) => BitbucketRequest =
     new BitbucketRequest(cfg.getBasicAuthHeaderValue, _, _, _, _)
 
   def rawGetRequests(cfg: BitbucketConfig): String => BitbucketRequest = {
-    new BitbucketRequest(cfg.getBasicAuthHeaderValue, Methods.Get, _, Nil, None)
+    new BitbucketRequest(cfg.getBasicAuthHeaderValue, Methods.Get, _, Vector.empty, None)
   }
 }

@@ -2,6 +2,8 @@ package io.morgaroth.bitbucketclient.models
 
 import java.util.UUID
 
+import cats.syntax.option._
+
 case class PaginatedResponse[A](
                                  size: Option[Int],
                                  page: Int,
@@ -54,9 +56,13 @@ case class BBUser(
                    uuid: UUID,
                  ) {
   def asUsername = BBUserUsername(username)
+
+  def asUserId = BBUserId(uuid.some, none)
 }
 
 case class BBUserUsername(username: String)
+
+case class BBUserId(uuid: Option[UUID], nickname: Option[String])
 
 
 sealed trait MergeStrategy {

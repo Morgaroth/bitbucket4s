@@ -17,7 +17,9 @@ val commonSettings = Seq(
 
   logBuffered := false,
 
-  // Bintray
+  testOptions in Test += Tests.Filter(suiteName => !suiteName.endsWith("ISpec")),
+
+    // Bintray
   licenses += ("MIT", url("http://opensource.org/licenses/MIT")),
   bintrayVcsUrl := Some("https://gitlab.com/morgaroth/op-rabbit-rpc.git"),
 )

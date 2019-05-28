@@ -2,6 +2,7 @@ package io.morgaroth.bitbucketclient.models
 
 import java.util.UUID
 
+import cats.syntax.option._
 import org.joda.time.DateTime
 
 case class BBPullRequestLinks(
@@ -63,7 +64,7 @@ case class BBPullRequestCompleteInfo(
                                       author: BBUser,
                                       merge_commit: Option[BBCommit],
                                       links: BBPullRequestLinks,
-                                      reviewers: List[BBPullRequestReviewer]
+                                      reviewers: Vector[BBPullRequestReviewer]
                                     )
 
 case class BBPullrequestSummary(
@@ -97,12 +98,14 @@ case class BBPullRequestReviewer(
                                   uuid: UUID,
                                 ) {
   def asUsername = BBUserUsername(username)
+
+  def asUserId = BBUserId(uuid.some, none)
 }
 
 
 case class BBPullRequestUpdate(
                                 title: String,
                                 description: String,
-                                reviewers: List[BBUserUsername],
+                                reviewers: Vector[BBUserId],
                                 close_source_branch: Boolean,
                               )

@@ -129,11 +129,11 @@ object SearchQuery {
 
   def BBStateP(right: BBPullRequestState): SearchQuery = BBEQString("state", right.name)
 
-  def BBStateP(data: List[BBPullRequestState]): SearchQuery =
+  def BBStateP(data: Vector[BBPullRequestState]): SearchQuery =
     BBGroup(data.map(BBStateP).reduce(_ or _))
 
   def BBStateP(right: BBPullRequestState, more: BBPullRequestState*): SearchQuery =
-    BBStateP(right :: more.toList)
+    BBStateP(right +: more.toVector)
 
 }
 

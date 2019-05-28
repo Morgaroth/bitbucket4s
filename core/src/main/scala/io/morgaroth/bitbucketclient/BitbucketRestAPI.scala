@@ -45,7 +45,7 @@ trait BitbucketRestAPI[F[_]] extends LazyLogging with Bitbucket4sMarshalling {
   private def searchRefs[A: Decoder](repoId: String, kind: String, nameLike: String): EitherT[F, BitbucketError, Vector[A]] = {
     val req = regGen(
       Methods.Get, API + s"repositories/$repoId/refs/$kind",
-      List(SearchQ("name" ~ nameLike)),
+      Vector(SearchQ("name" ~ nameLike)),
       None)
 
     getAllPaginatedResponse[A](req)
@@ -56,7 +56,7 @@ trait BitbucketRestAPI[F[_]] extends LazyLogging with Bitbucket4sMarshalling {
     *
     * @see https://developer.atlassian.com/bitbucket/api/2/reference/resource/repositories/%7Busername%7D/%7Brepo_slug%7D/pullrequests
     */
-  def getPullRequests(repoId: String, statuses: List[BBPullRequestState]): EitherT[F, BitbucketError, Vector[BBPullRequest]] = {
+  def getPullRequests(repoId: String, statuses: Vector[BBPullRequestState]): EitherT[F, BitbucketError, Vector[BBPullRequest]] = {
     val req = regGen(Methods.Get, API + s"repositories/$repoId/pullrequests", statuses.map(x => PRStateQ(x)), None)
     getAllPaginatedResponse[BBPullRequest](req)
   }
@@ -66,8 +66,18 @@ trait BitbucketRestAPI[F[_]] extends LazyLogging with Bitbucket4sMarshalling {
     *
     * @see https://developer.atlassian.com/bitbucket/api/2/reference/resource/repositories/%7Busername%7D/%7Brepo_slug%7D/pullrequests
     */
-  def getPullRequests(repoOwner: String, repoName: String, statuses: List[BBPullRequestState]): EitherT[F, BitbucketError, Vector[BBPullRequest]] = {
+  def getPullRequests(repoOwner: String, repoName: String, statuses: Vector[BBPullRequestState]): EitherT[F, BitbucketError, Vector[BBPullRequest]] = {
     getPullRequests(s"$repoOwner/$repoName", statuses)
+  }
+
+
+  /**
+    * GET /repositories/{username}/{repo_slug}/pullrequests
+    *
+    * @see https://developer.atlassian.com/bitbucket/api/2/reference/resource/repositories/%7Busername%7D/%7Brepo_slug%7D/pullrequests
+    */
+  def getPullRequests(repoId: String, status: BBPullRequestState, statuses: BBPullRequestState*): EitherT[F, BitbucketError, Vector[BBPullRequest]] = {
+    getPullRequests(repoId, status +: statuses.toVector)
   }
 
   /**
@@ -78,9 +88,9 @@ trait BitbucketRestAPI[F[_]] extends LazyLogging with Bitbucket4sMarshalling {
     */
   def searchPullRequests(repoId: String)(
     sourceBranchLike: Option[String] = None,
-    states: List[BBPullRequestState] = List.empty,
+    states: Vector[BBPullRequestState] = Vector.empty,
   ): EitherT[F, BitbucketError, Vector[BBPullRequest]] = {
-    val req = regGen(Methods.Get, API + s"repositories/$repoId/pullrequests", List(SearchQ(List(
+    val req = regGen(Methods.Get, API + s"repositories/$repoId/pullrequests", Vector(SearchQ(Vector(
       sourceBranchLike.map(x => "source.branch.name" ~ x).toList,
       List(BBStateP(states))
     ).flatten.reduce(_ and _))), None)
@@ -123,7 +133,7 @@ trait BitbucketRestAPI[F[_]] extends LazyLogging with Bitbucket4sMarshalling {
     */
   def getPullRequest(repoId: String, pullRequestId: Long): EitherT[F, BitbucketError, BBPullRequestCompleteInfo] = {
     implicit val rId: RequestId = RequestId.newOne
-    val req = regGen(Methods.Get, API + s"repositories/$repoId/pullrequests/$pullRequestId", Nil, None)
+    val req = regGen(Methods.Get, API + s"repositories/$repoId/pullrequests/$pullRequestId", Vector.empty, None)
     invokeRequest(req).flatMap(MJson.readT[F, BBPullRequestCompleteInfo])
   }
 
@@ -135,12 +145,12 @@ trait BitbucketRestAPI[F[_]] extends LazyLogging with Bitbucket4sMarshalling {
   def updatePullRequest(repoId: String, pullRequestId: Long)(
     title: String,
     description: String,
-    reviewers: List[BBUserUsername],
+    reviewers: Vector[BBUserId],
     closeBranch: Boolean,
   ): EitherT[F, BitbucketError, BBPullRequest] = {
     implicit val rId: RequestId = RequestId.newOne
     val data = BBPullRequestUpdate(title, description, reviewers, closeBranch)
-    val req = regGen(Methods.Put, API + s"repositories/$repoId/pullrequests/$pullRequestId", Nil, Some(MJson.write(data)))
+    val req = regGen(Methods.Put, API + s"repositories/$repoId/pullrequests/$pullRequestId", Vector.empty, Some(MJson.write(data)))
     invokeRequest(req).flatMap(MJson.readT[F, BBPullRequest])
   }
 }
