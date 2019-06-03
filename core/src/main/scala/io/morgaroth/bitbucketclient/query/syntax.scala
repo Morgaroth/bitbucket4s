@@ -44,7 +44,7 @@ case class BitbucketRequest(
                              payload: Option[String],
                            ) {
   lazy val render: String = {
-    val base = s"https://api.bitbucket.org/$path"
+    val base = if (path.startsWith("https://api.bitbucket.org/")) path else s"https://api.bitbucket.org/$path"
     if (query.nonEmpty) {
       s"$base?${query.map(_.render).mkString("&")}"
     } else base

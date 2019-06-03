@@ -145,7 +145,7 @@ trait BitbucketRestAPI[F[_]] extends LazyLogging with Bitbucket4sMarshalling {
   def updatePullRequest(repoId: String, pullRequestId: Long)(
     title: String,
     description: String,
-    reviewers: Vector[BBUserId],
+    reviewers: Vector[BBUserIdentity],
     closeBranch: Boolean,
   ): EitherT[F, BitbucketError, BBPullRequest] = {
     implicit val rId: RequestId = RequestId.newOne

@@ -55,15 +55,24 @@ case class BBUser(
                    links: BBLinksAvatar,
                    uuid: UUID,
                  ) {
-  def asUsername = BBUserUsername(username)
+  def asUsernameId: BBUserIdentity = BBUserIdentity.username(username)
 
-  def asUserId = BBUserId(uuid.some, none)
+  def asUserId: BBUserIdentity = BBUserIdentity(uuid)
 }
 
 case class BBUserUsername(username: String)
 
-case class BBUserId(uuid: Option[UUID], nickname: Option[String])
+case class BBUserIdentity(uuid: Option[UUID], nickname: Option[String], username: Option[String])
 
+object BBUserIdentity {
+  def apply(userID: UUID) = new BBUserIdentity(userID.some, none, none)
+
+  def uuid(userID: String) = BBUserIdentity(UUID.fromString(userID).some, none, none)
+
+  def nickname(nickname: String) = BBUserIdentity(none, nickname.some, none)
+
+  def username(username: String) = BBUserIdentity(none, none, username.some)
+}
 
 sealed trait MergeStrategy {
   def repr: String
