@@ -90,7 +90,6 @@ object BBPullRequestStates {
 }
 
 case class BBPullRequestReviewer(
-                                  username: String,
                                   nickname: String,
                                   account_status: Option[String],
                                   display_name: String,

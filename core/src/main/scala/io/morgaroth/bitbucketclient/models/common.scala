@@ -47,7 +47,6 @@ case class BBAuthor(
                    )
 
 case class BBUser(
-                   username: Option[String],
                    nickname: String,
                    display_name: String,
                    account_id: Option[String],
@@ -60,14 +59,14 @@ case class BBUser(
 
 case class BBUserUsername(username: String)
 
-case class BBUserIdentity(uuid: Option[UUID], nickname: Option[String], username: Option[String])
+case class BBUserIdentity(uuid: Option[UUID], nickname: Option[String])
 
 object BBUserIdentity {
-  def apply(userID: UUID) = new BBUserIdentity(userID.some, none, none)
+  def apply(userID: UUID) = new BBUserIdentity(userID.some, none)
 
-  def uuid(userID: String) = BBUserIdentity(UUID.fromString(userID).some, none, none)
+  def uuid(userID: String) = BBUserIdentity(UUID.fromString(userID).some, none)
 
-  def nickname(nickname: String) = BBUserIdentity(none, nickname.some, none)
+  def nickname(nickname: String) = BBUserIdentity(none, nickname.some)
 }
 
 sealed trait MergeStrategy {
