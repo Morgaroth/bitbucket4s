@@ -1,0 +1,146 @@
+{
+  "pagelen": 10,
+  "values": [
+    {
+      "description": "* \\[ABCD-4350\\] - \r\n* \\[ABSCT4350\\] - Add something",
+      "links": {
+        "decline": {
+          "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/pullrequests/393/decline"
+        },
+        "commits": {
+          "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/pullrequests/393/commits"
+        },
+        "self": {
+          "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/pullrequests/393"
+        },
+        "comments": {
+          "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/pullrequests/393/comments"
+        },
+        "merge": {
+          "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/pullrequests/393/merge"
+        },
+        "html": {
+          "href": "https://bitbucket.org/some-group/some-project/pull-requests/393"
+        },
+        "activity": {
+          "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/pullrequests/393/activity"
+        },
+        "diff": {
+          "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/pullrequests/393/diff"
+        },
+        "approve": {
+          "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/pullrequests/393/approve"
+        },
+        "statuses": {
+          "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/pullrequests/393/statuses"
+        }
+      },
+      "title": "Feature/ABCD-1234",
+      "close_source_branch": false,
+      "type": "pullrequest",
+      "id": 393,
+      "destination": {
+        "commit": {
+          "hash": "dsat43d5esff",
+          "type": "commit",
+          "links": {
+            "self": {
+              "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/commit/dsat43d5esff"
+            },
+            "html": {
+              "href": "https://bitbucket.org/some-group/some-project/commits/dsat43d5esff"
+            }
+          }
+        },
+        "repository": {
+          "links": {
+            "self": {
+              "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project"
+            },
+            "html": {
+              "href": "https://bitbucket.org/some-group/some-project"
+            },
+            "avatar": {
+              "href": "https://bytebucket.org/ravatar/%7Bd118e47d1%7D?ts=default"
+            }
+          },
+          "type": "repository",
+          "name": "some-project",
+          "full_name": "some-group/some-project",
+          "uuid": "{d34d244d-1a6f-42ac-81a0-d9b8268478ee}"
+        },
+        "branch": {
+          "name": "develop"
+        }
+      },
+      "created_on": "2019-06-07T11:48:27.737926+00:00",
+      "summary": {
+        "raw": "* \\[ABCD-1234\\] - Add sth to somewhere\r\n* \\[ABCD-1234\\] - Add sth to somewhere",
+        "markup": "markdown",
+        "html": "<ul>\n<li>[ABCD-1234] - Add sth to somewhere</li>\n<li>[ABCD-1234] - Add sth to somewhere</li>\n</ul>",
+        "type": "rendered"
+      },
+      "source": {
+        "commit": {
+          "hash": "4915e5d8b56d",
+          "type": "commit",
+          "links": {
+            "self": {
+              "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project/commit/4915e5d8b56d"
+            },
+            "html": {
+              "href": "https://bitbucket.org/some-group/some-project/commits/4915e5d8b56d"
+            }
+          }
+        },
+        "repository": {
+          "links": {
+            "self": {
+              "href": "https://api.bitbucket.org/2.0/repositories/some-group/some-project"
+            },
+            "html": {
+              "href": "https://bitbucket.org/some-group/some-project"
+            },
+            "avatar": {
+              "href": "https://bytebucket.org/ravatar/%7Bdasfxsef<fxe7d1%7D?ts=default"
+            }
+          },
+          "type": "repository",
+          "name": "some-project",
+          "full_name": "some-group/some-project",
+          "uuid": "{d34d244d-1a6f-42ac-81a0-d9b8268478ee}"
+        },
+        "branch": {
+          "name": "feature/ABCD-1234"
+        }
+      },
+      "comment_count": 27,
+      "state": "OPEN",
+      "task_count": 0,
+      "reason": "",
+      "updated_on": "2019-06-12T12:44:44.850980+00:00",
+      "author": {
+        "display_name": "Jan Nowak",
+        "uuid": "{eb135b42-aa1d-4f93-b99e-0c6992afa99f}",
+        "links": {
+          "self": {
+            "href": "https://api.bitbucket.org/2.0/users/%7Beb135b42-aa1d-4f93-b99e-0c6992afa99f%7D"
+          },
+          "html": {
+            "href": "https://bitbucket.org/%7Beb135b42-aa1d-4f93-b99e-0c6992afa99f%7D/"
+          },
+          "avatar": {
+            "href": "https://avatar-cdn.atlassian.coR-3.png"
+          }
+        },
+        "nickname": "jnowak",
+        "type": "user",
+        "account_id": "5c07e3ad9aeccc769f332bdc"
+      },
+      "merge_commit": null,
+      "closed_by": null
+    }
+  ],
+  "page": 1,
+  "size": 1
+}

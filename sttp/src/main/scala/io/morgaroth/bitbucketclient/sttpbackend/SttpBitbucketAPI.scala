@@ -33,17 +33,17 @@ class SttpBitbucketAPI(val config: BitbucketConfig, apiConfig: BitbucketRestAPIC
     }.getOrElse(requestWithoutPayload)
 
     if (apiConfig.debug) logger.debug(s"request to send: $request")
-    requestsLogger.info(s"Request ID {}, request: {}, payload:\n{}", requestId.id, request.body("removed for log"), request.body)
+    requestsLogger.info(s"Request ID {} ({}), request: {}, payload:\n{}", requestId.id, requestId.kind, request.body("removed for log"), request.body)
 
     val response = request
       .send()
       .toEither.leftMap[BitbucketError](BBRequestingError("try-http-backend-left", requestId.id, _))
       .flatMap { response =>
         if (apiConfig.debug) logger.debug(s"received request: $response")
-        requestsLogger.info(s"Request ID {}, response: {}, payload:\n{}", requestId, response.copy(rawErrorBody = Right("removed for log")), response.body.fold(identity, identity))
-        response.rawErrorBody.leftMap(error => BBHttpError(response.code.intValue(), "http-response-error", requestId.id, Some(new String(error, "UTF-8"))))
+        requestsLogger.info(s"Request ID {} ({}), response: {}, payload:\n{}", requestId, response.copy(rawErrorBody = Right("removed for log")), response.body.fold(identity, identity))
+        response.rawErrorBody.leftMap(error => BBHttpError(response.code.intValue(), "http-response-error", requestId.id, requestId.kind, Some(new String(error, "UTF-8"))))
       }
 
-    EitherT.fromEither(response)
+    EitherT.fromEither[Future](response)
   }
 }

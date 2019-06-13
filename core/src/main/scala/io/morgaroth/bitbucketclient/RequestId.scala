@@ -2,8 +2,8 @@ package io.morgaroth.bitbucketclient
 
 import java.util.UUID
 
-case class RequestId(id: String)
+case class RequestId(id: String, kind: String)
 
 object RequestId {
-  def newOne = new RequestId(UUID.randomUUID().toString)
+  def newOne(kind: String) = new RequestId(UUID.randomUUID().toString, kind)
 }

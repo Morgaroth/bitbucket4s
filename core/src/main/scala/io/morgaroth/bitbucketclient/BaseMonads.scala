@@ -4,7 +4,7 @@ trait BitbucketError
 
 case class BBRequestingError(description: String, requestId: String, cause: Throwable) extends BitbucketError
 
-case class BBHttpError(statusCode: Int, description: String, requestId: String, errorBody: Option[String]) extends BitbucketError
+case class BBHttpError(statusCode: Int, description: String, requestId: String, requestType: String, errorBody: Option[String]) extends BitbucketError
 
 case class BBMarshallingError(description: String, requestId: String, cause: Throwable) extends BitbucketError
 

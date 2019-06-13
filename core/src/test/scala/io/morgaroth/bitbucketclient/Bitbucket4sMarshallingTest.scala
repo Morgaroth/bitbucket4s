@@ -19,34 +19,30 @@ class Bitbucket4sMarshallingTest extends FlatSpec with Matchers with Bitbucket4s
     result.right.get.values.head.merge_commit shouldBe defined
   }
 
-  it should "load branches list" in {
-    val result = MJson.read[PaginatedResponse[BBBranch]](Source.fromResource("branch_list.json").mkString)
-    result shouldBe 'right
-  }
-
-  it should "load pull request full info" in {
-    val result = MJson.read[BBPullRequestCompleteInfo](Source.fromResource("full_pr_info.json").mkString)
-    result shouldBe 'right
-    result.right.get.reviewers
-  }
-
-  it should "load pull request full info 2" in {
-    val result = MJson.read[BBPullRequestCompleteInfo](Source.fromResource("full_pr_info_2.json").mkString)
-    result shouldBe 'right
-  }
-
-  it should "load branches list 2" in {
-    val result = MJson.read[PaginatedResponse[BBBranch]](Source.fromResource("real_response_from_search_branches_request_2.json").mkString)
-    result shouldBe 'right
-  }
-
-  it should "load branches list without heads" in {
-    val result = MJson.read[PaginatedResponse[BBBranch]](Source.fromResource("real_response_from_search_branches_request.json").mkString)
-    result shouldBe 'right
-  }
-
   it should "load tags list" in {
     val result = MJson.read[PaginatedResponse[BBTag]](Source.fromResource("tag_list.json").mkString)
     result shouldBe 'right
   }
+
+  Vector("full_pr_info_1.json", "full_pr_info_2.json").foreach { resourceName =>
+    it should s"parse full PR info from $resourceName" in {
+      val result = MJson.read[BBPullRequestCompleteInfo](Source.fromResource(resourceName).mkString)
+      result shouldBe 'right
+    }
+  }
+
+  Vector("search_branches_response_1.json", "search_branches_response_2.json", "search_branches_response_3.json").foreach { resourceName =>
+    it should s"parse branches search response info from $resourceName" in {
+      val result = MJson.read[PaginatedResponse[BBBranch]](Source.fromResource(resourceName).mkString)
+      result shouldBe 'right
+    }
+  }
+
+  Vector("search_prs_response_1.json").foreach { resourceName =>
+    it should s"parse prs search response from $resourceName" in {
+      val result = MJson.read[PaginatedResponse[BBPullRequest]](Source.fromResource(resourceName).mkString)
+      result shouldBe 'right
+    }
+  }
+
 }

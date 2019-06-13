@@ -96,8 +96,6 @@ case class BBPullRequestReviewer(
                                   display_name: String,
                                   uuid: UUID,
                                 ) {
-  def asUsername: BBUserIdentity = BBUserIdentity.username(username)
-
   def asUserId: BBUserIdentity = BBUserIdentity(uuid)
 }
 

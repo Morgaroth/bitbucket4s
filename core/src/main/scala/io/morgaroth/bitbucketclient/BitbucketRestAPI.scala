@@ -24,9 +24,9 @@ trait BitbucketRestAPI[F[_]] extends LazyLogging with Bitbucket4sMarshalling {
 
   protected def invokeRequest(request: BitbucketRequest)(implicit requestId: RequestId): EitherT[F, BitbucketError, String]
 
-  private def getAllPaginatedResponse[A: Decoder](req: BitbucketRequest): EitherT[F, BitbucketError, Vector[A]] = {
+  private def getAllPaginatedResponse[A: Decoder](req: BitbucketRequest, kind: String): EitherT[F, BitbucketError, Vector[A]] = {
     def getAll(nextLink: String, acc: Vector[A]): EitherT[F, BitbucketError, Vector[A]] = {
-      implicit val rId: RequestId = RequestId.newOne
+      implicit val rId: RequestId = RequestId.newOne(s"$kind-next-call")
       logger.debug(s"Invoking next with $nextLink")
       invokeRequest(rawRequest(nextLink)).flatMap(MJson.readT[F, PaginatedResponse[A]]).flatMap { result =>
         result.next.map { nextLink =>
@@ -35,7 +35,7 @@ trait BitbucketRestAPI[F[_]] extends LazyLogging with Bitbucket4sMarshalling {
       }
     }
     {
-      implicit val rId2: RequestId = RequestId.newOne
+      implicit val rId2: RequestId = RequestId.newOne(s"$kind-first-call")
       invokeRequest(req).flatMap(MJson.readT[F, PaginatedResponse[A]]).flatMap { first =>
         first.next.map(nextLink => getAll(nextLink, first.values)).getOrElse(EitherT.pure(first.values))
       }
@@ -48,7 +48,7 @@ trait BitbucketRestAPI[F[_]] extends LazyLogging with Bitbucket4sMarshalling {
       Vector(SearchQ("name" ~ nameLike)),
       None)
 
-    getAllPaginatedResponse[A](req)
+    getAllPaginatedResponse[A](req, "bitbucket-search-refs")
   }
 
   /**
@@ -58,7 +58,7 @@ trait BitbucketRestAPI[F[_]] extends LazyLogging with Bitbucket4sMarshalling {
     */
   def getPullRequests(repoId: String, statuses: Vector[BBPullRequestState]): EitherT[F, BitbucketError, Vector[BBPullRequest]] = {
     val req = regGen(Methods.Get, API + s"repositories/$repoId/pullrequests", statuses.map(x => PRStateQ(x)), None)
-    getAllPaginatedResponse[BBPullRequest](req)
+    getAllPaginatedResponse[BBPullRequest](req, "bitbucket-search-prs-by-state")
   }
 
   /**
@@ -95,7 +95,7 @@ trait BitbucketRestAPI[F[_]] extends LazyLogging with Bitbucket4sMarshalling {
       List(BBStateP(states))
     ).flatten.reduce(_ and _))), None)
 
-    getAllPaginatedResponse[BBPullRequest](req)
+    getAllPaginatedResponse[BBPullRequest](req, "bitbucket-search-pr-by-text-and-state")
   }
 
   /**
@@ -132,7 +132,7 @@ trait BitbucketRestAPI[F[_]] extends LazyLogging with Bitbucket4sMarshalling {
     *
     */
   def getPullRequest(repoId: String, pullRequestId: Long): EitherT[F, BitbucketError, BBPullRequestCompleteInfo] = {
-    implicit val rId: RequestId = RequestId.newOne
+    implicit val rId: RequestId = RequestId.newOne("bitbucket-get-pr-by-id")
     val req = regGen(Methods.Get, API + s"repositories/$repoId/pullrequests/$pullRequestId", Vector.empty, None)
     invokeRequest(req).flatMap(MJson.readT[F, BBPullRequestCompleteInfo])
   }
@@ -148,7 +148,7 @@ trait BitbucketRestAPI[F[_]] extends LazyLogging with Bitbucket4sMarshalling {
     reviewers: Vector[BBUserIdentity],
     closeBranch: Boolean,
   ): EitherT[F, BitbucketError, BBPullRequest] = {
-    implicit val rId: RequestId = RequestId.newOne
+    implicit val rId: RequestId = RequestId.newOne("bitbucket-update-pr")
     val data = BBPullRequestUpdate(title, description, reviewers, closeBranch)
     val req = regGen(Methods.Put, API + s"repositories/$repoId/pullrequests/$pullRequestId", Vector.empty, Some(MJson.write(data)))
     invokeRequest(req).flatMap(MJson.readT[F, BBPullRequest])
