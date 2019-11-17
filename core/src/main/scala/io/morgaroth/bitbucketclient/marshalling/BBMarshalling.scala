@@ -7,16 +7,17 @@ import io.circe._
 import io.circe.parser.decode
 import io.circe.syntax.EncoderOps
 import io.morgaroth.bitbucketclient._
+import io.morgaroth.bitbucketclient.models.{BBEntityType, BBPullRequestState, BBPullRequestStates, MergeStrategy}
 import org.joda.time.DateTime
 import org.joda.time.format.DateTimeFormat
 
 import scala.language.{higherKinds, implicitConversions}
 
-trait Bitbucket4sMarshalling extends JodaCodec
-  with BBUUUIDCodec
-  with EntityTypeCodec
-  with PullRequestStateCodec
-  with MergeStrategyCodec {
+trait Bitbucket4sMarshalling extends JodaCodec with BBUUUIDCodec {
+
+  implicit val mergeStrategyCodec: Codec[MergeStrategy] = EnumMarshalling.stringEnumCodecFor(MergeStrategy.byName)(_.repr)
+  implicit val entityTypeCodec: Codec[BBEntityType] = EnumMarshalling.stringEnumCodecFor(BBEntityType.byName)(_.repr)
+  implicit val bbPullRequestStateCodec: Codec[BBPullRequestState] = EnumMarshalling.stringEnumCodecFor(BBPullRequestStates.byName)(_.name)
 
   implicit class Extractable(value: JsonObject) {
     def extract[T](implicit decoder: Decoder[T]): Either[Error, T] = decode[T](value.toString)

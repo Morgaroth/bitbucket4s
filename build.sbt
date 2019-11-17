@@ -1,7 +1,7 @@
 val akkaV = "2.5.6"
 val akkaHttpVer = "10.0.9"
 
-val circeVersion = "0.11.1"
+val circeVersion = "0.12.2"
 
 val validate = Def.taskKey[Unit]("Validates entire project")
 
@@ -23,7 +23,6 @@ val commonSettings = Seq(
   licenses += ("MIT", url("http://opensource.org/licenses/MIT")),
   bintrayVcsUrl := Some("https://gitlab.com/morgaroth/op-rabbit-rpc.git"),
 )
-
 
 val core = project
   .settings(commonSettings: _*)
