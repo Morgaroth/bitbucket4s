@@ -1,3 +1,5 @@
+import sbtrelease.ReleasePlugin.autoImport.releaseNextCommitMessage
+
 val akkaV = "2.5.6"
 val akkaHttpVer = "10.0.9"
 
@@ -68,10 +70,11 @@ val bitbucket4s = project.in(file(".")).aggregate(core, sttp, akka)
 
     validate := Def.task {
       (Test / test).value
-      //      tut.value
+      // tut.value
     }.value,
 
     // Release
     releaseTagComment := s"Releasing ${(version in ThisBuild).value} [skip ci]",
     releaseCommitMessage := s"Setting version to ${(version in ThisBuild).value} [skip ci]",
+    releaseNextCommitMessage := s"Setting version to ${(version in ThisBuild).value} [skip ci]",
   )

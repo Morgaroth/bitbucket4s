@@ -25,6 +25,13 @@ tests:
   script:
     - sbt -v -ivy $PWD/.ivy2 -sbt-dir $PWD/.sbt validate
 
+publish-snapshot:
+  stage: publish
+  except:
+    - master
+  script:
+    - sbt -v -ivy $PWD/.ivy2 -sbt-dir $PWD/.sbt -Dbintray.user=$BINTRAY_USER -Dbintray.pass=${_BINTRAY_PASS} +publish
+
 release:
   stage: publish
   only:
@@ -43,3 +50,4 @@ release:
 
   after_script:
     - rm -Rfv .ssh
+
